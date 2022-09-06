@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_MetaHeader.cshtml")
+</head>
+<body>
+    <!-- header  -->
+    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_HeaderAdmin.cshtml")
+    <!-- end header -->
+    <!-- sidebar  -->
+    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_SideBarAdmin.cshtml")
+    <!-- end sidebar  -->
+    <!-- BODY  -->
+    @RenderBody()
+    <!-- END BODY  -->
+    <!-- JS -->
+    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_JsLibrariesAdmin.cshtml")
+    <!-- End JS -->
+    
+</body>
+</html>
