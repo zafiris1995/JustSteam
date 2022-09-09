@@ -20,7 +20,7 @@ namespace FinalApp.Controllers
 
         public ActionResult Index()
         {
-            return View(unit.Games.GetAll());
+            return View();
         }
 
         public ActionResult About()

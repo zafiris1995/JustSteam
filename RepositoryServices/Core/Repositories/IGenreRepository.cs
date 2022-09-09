@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace RepositoryServices.Core.Repositories
 {
-    public interface IGameRepository : IGenericRepository<Game>
+    internal interface IGenreRepository : IGenericRepository<Genre>
     {
-        IEnumerable<Game> GetBestGames();
-        IEnumerable<Game> GetGamesOrderedByAscending();
-
     }
 }

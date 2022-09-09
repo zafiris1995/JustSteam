@@ -14,5 +14,15 @@ namespace RepositoryServices.Persistance.Repositories
         public GameRepository(ApplicationDbContext context) : base(context)
         {
         }
+
+        public IEnumerable<Game> GetBestGames()
+        {
+            return table.OrderBy(x => x.Rating).Take(5).ToList();
+        }
+
+        public IEnumerable<Game> GetGamesOrderedByAscending()
+        {
+            return table.OrderBy(x => x.Title).ToList();
+        }
     }
 }
