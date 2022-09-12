@@ -89,35 +89,35 @@ namespace MyDatabase.Initializers
             context.Companies.AddOrUpdate(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17);
             context.SaveChanges();
             #endregion
-            
+
             #region Populating Lists
-            
-            g1.Company = new List<Company> { c9 };
-            g2.Company = new List<Company> { c7 };
-            g3.Company = new List<Company> { c17 };
-            g4.Company = new List<Company> { c1 };
-            g5.Company = new List<Company> { c1 };
-            g6.Company = new List<Company> { c10 };
-            g7.Company = new List<Company> { c10 };
-            g8.Company = new List<Company> { c11 };
-            g9.Company = new List<Company> { c12 };
-            g10.Company = new List<Company> { c1 };
-            g11.Company = new List<Company> { c1 };
-            g12.Company = new List<Company> { c13 };
-            g13.Company = new List<Company> { c14 };
-            g14.Company = new List<Company> { c12 };
-            g15.Company = new List<Company> { c1 };
-            g16.Company = new List<Company> { c4 };
-            g17.Company = new List<Company> { c6 };
-            g18.Company = new List<Company> { c15 };
-            g19.Company = new List<Company> { c16 };
-            g20.Company = new List<Company> { c11 };
-            g21.Company = new List<Company> { c17 };
-            g22.Company = new List<Company> { c3 };
-            g23.Company = new List<Company> { c2 };
-            g24.Company = new List<Company> { c5 };
-            g25.Company = new List<Company> { c8 };
-            g26.Company = new List<Company> { c1 };
+
+            g1.Company = c9;
+            g2.Company = c7;
+            g3.Company = c17;
+            g4.Company = c1;
+            g5.Company = c1;
+            g6.Company = c10;
+            g7.Company = c10;
+            g8.Company = c11;
+            g9.Company = c12;
+            g10.Company = c1;
+            g11.Company = c1;
+            g12.Company = c13;
+            g13.Company = c14;
+            g14.Company = c12;
+            g15.Company = c1;
+            g16.Company = c4;
+            g17.Company = c6;
+            g18.Company = c15;
+            g19.Company = c16;
+            g20.Company = c11;
+            g21.Company = c17;
+            g22.Company = c3;
+            g23.Company = c2;
+            g24.Company = c5;
+            g25.Company = c8;
+            g26.Company = c1;
             
             g1.Genres = new List<Genre> { gen8 };            
             g2.Genres = new List<Genre> { gen2};            
