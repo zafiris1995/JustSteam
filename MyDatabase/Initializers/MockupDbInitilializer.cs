@@ -77,9 +77,38 @@ namespace MyDatabase.Initializers
             Company c16 = new Company() { Name = "Lucasfilm Games", PhotoUrl = "https://upload.wikimedia.org/wikipedia/commons/d/d1/Lucasfilm_Games_Logo.png" }; 
             Company c17 = new Company() { Name = "Player First Games", PhotoUrl = "https://cdn.multiversus.com/static/player-first.png" }; 
 
-            context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8);
+            context.Companies.AddOrUpdate(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17);
             context.SaveChanges();
             #endregion
+            
+            #region Populating Lists
+            
+            g1.Company - new List<Company> { c9 };
+            g2.Company - new List<Company> { c7 };
+            g3.Company - new List<Company> { c17 };
+            g4.Company - new List<Company> { c1 };
+            g5.Company - new List<Company> { c1 };
+            g6.Company - new List<Company> { c10 };
+            g7.Company - new List<Company> { c10 };
+            g8.Company - new List<Company> { c11 };
+            g9.Company - new List<Company> { c12 };
+            g10.Company - new List<Company> { c1 };
+            g11.Company - new List<Company> { c1 };
+            g12.Company - new List<Company> { c13 };
+            g13.Company - new List<Company> { c14 };
+            g14.Company - new List<Company> { c12 };
+            g15.Company - new List<Company> { c1 };
+            g16.Company - new List<Company> { c4 };
+            g17.Company - new List<Company> { c6 };
+            g18.Company - new List<Company> { c15 };
+            g19.Company - new List<Company> { c16 };
+            g20.Company - new List<Company> { c11 };
+            g21.Company - new List<Company> { c17 };
+            
+            g1.Genres
+            
+            #endregion
+
         }
     }
 }
