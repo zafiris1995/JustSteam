@@ -52,6 +52,8 @@ namespace MyDatabase.Initializers
             Genre gen6 = new Genre() { Kind = "Strategy" };
             Genre gen7 = new Genre() { Kind = "Sports" };
             Genre gen8 = new Genre() { Kind = "MMO" };
+            Genre gen9 = new Genre() { Kind = "MOBA" };
+            Genre gen10 = new Genre() {Kind = "Fighting" };
 
             context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8);
             context.SaveChanges();
@@ -83,29 +85,49 @@ namespace MyDatabase.Initializers
             
             #region Populating Lists
             
-            g1.Company - new List<Company> { c9 };
-            g2.Company - new List<Company> { c7 };
-            g3.Company - new List<Company> { c17 };
-            g4.Company - new List<Company> { c1 };
-            g5.Company - new List<Company> { c1 };
-            g6.Company - new List<Company> { c10 };
-            g7.Company - new List<Company> { c10 };
-            g8.Company - new List<Company> { c11 };
-            g9.Company - new List<Company> { c12 };
-            g10.Company - new List<Company> { c1 };
-            g11.Company - new List<Company> { c1 };
-            g12.Company - new List<Company> { c13 };
-            g13.Company - new List<Company> { c14 };
-            g14.Company - new List<Company> { c12 };
-            g15.Company - new List<Company> { c1 };
-            g16.Company - new List<Company> { c4 };
-            g17.Company - new List<Company> { c6 };
-            g18.Company - new List<Company> { c15 };
-            g19.Company - new List<Company> { c16 };
-            g20.Company - new List<Company> { c11 };
-            g21.Company - new List<Company> { c17 };
+            g1.Company = new List<Company> { c9 };
+            g2.Company = new List<Company> { c7 };
+            g3.Company = new List<Company> { c17 };
+            g4.Company = new List<Company> { c1 };
+            g5.Company = new List<Company> { c1 };
+            g6.Company = new List<Company> { c10 };
+            g7.Company = new List<Company> { c10 };
+            g8.Company = new List<Company> { c11 };
+            g9.Company = new List<Company> { c12 };
+            g10.Company = new List<Company> { c1 };
+            g11.Company = new List<Company> { c1 };
+            g12.Company = new List<Company> { c13 };
+            g13.Company = new List<Company> { c14 };
+            g14.Company = new List<Company> { c12 };
+            g15.Company = new List<Company> { c1 };
+            g16.Company = new List<Company> { c4 };
+            g17.Company = new List<Company> { c6 };
+            g18.Company = new List<Company> { c15 };
+            g19.Company = new List<Company> { c16 };
+            g20.Company = new List<Company> { c11 };
+            g21.Company = new List<Company> { c17 };
             
-            g1.Genres
+            g1.Genres = new List<Genre> { gen8 };            
+            g2.Genres = new List<Genre> { gen2};            
+            g3.Genres = new List<Genre> { gen3 };            
+            g4.Genres = new List<Genre> { gen6 };            
+            g5.Genres = new List<Genre> { gen1, gen4 };            
+            g6.Genres = new List<Genre> { gen4 };            
+            g7.Genres = new List<Genre> { gen4 };            
+            g8.Genres = new List<Genre> { gen2 };            
+            g9.Genres = new List<Genre> { gen6 };            
+            g10.Genres = new List<Genre> { gen6 };            
+            g11.Genres = new List<Genre> { gen1, gen4 };            
+            g12.Genres = new List<Genre> { gen4 };            
+            g13.Genres = new List<Genre> { gen5 };            
+            g14.Genres = new List<Genre> { gen5 };            
+            g15.Genres = new List<Genre> { gen1, gen4 };            
+            g16.Genres = new List<Genre> { gen5 };            
+            g17.Genres = new List<Genre> { gen4 };            
+            g18.Genres = new List<Genre> { gen2 };            
+            g19.Genres = new List<Genre> { gen2 };            
+            g20.Genres = new List<Genre> { gen9 };            
+            g21.Genres = new List<Genre> { gen10 };
             
             #endregion
 
