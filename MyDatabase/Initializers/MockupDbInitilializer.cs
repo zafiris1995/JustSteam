@@ -36,7 +36,11 @@ namespace MyDatabase.Initializers
             Game g19 = new Game() { Title = "The Secret of Monkey Island", Price = 15, Rating = 10, ReleaseDate = new DateTime(1990/10/01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a8/The_Secret_of_Monkey_Island_artwork.jpg"  };
             Game g20 = new Game() { Title = "DotA 2", Price = 60, Rating = 5, ReleaseDate = new DateTime(2013/07/09), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/0/0b/Dota_2_%28Steam_2019%29.jpg"  };
             Game g21 = new Game() { Title = "MultiVersus", Price = 50, Rating = 7, ReleaseDate = new DateTime(2022/08/15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/MultiVersus_Cover_Art.png"  };
-
+            Game g22 = new Game() {Title = "Fallout", Price = 30, Rating = 9, ReleaseDate = new DateTime (1997,10,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/af/Fallout.jpg?20210820180451" };
+            Game g23 = new Game() {Title = "League of Legends",  Rating = 6, Price = 0, ReleaseDate = new DateTime (2013,03,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/League_of_Legends_2019_vector.svg/900px-League_of_Legends_2019_vector.svg.png" };
+            Game g24 = new Game() {Title = "Far Cry", Price = 15, Rating = 9, ReleaseDate = new DateTime(2004,03,23) PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a5/Far_Cry_1_boxshot.jpg" };
+            Game g25 = new Game() {Title = "Sonic the Hedgehog" , Price = 8, ReleaseDate = new DateTime(1991,06,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?20150330215349" };
+            
             context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21);
             context.SaveChanges();
 
@@ -53,7 +57,8 @@ namespace MyDatabase.Initializers
             Genre gen7 = new Genre() { Kind = "Sports" };
             Genre gen8 = new Genre() { Kind = "MMO" };
             Genre gen9 = new Genre() { Kind = "MOBA" };
-            Genre gen10 = new Genre() {Kind = "Fighting" };
+            Genre gen10 = new Genre() { Kind = "Fighting" };
+            Genre gen11 = new Genre() { Kind = "Platform" };
 
             context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8);
             context.SaveChanges();
@@ -106,6 +111,10 @@ namespace MyDatabase.Initializers
             g19.Company = new List<Company> { c16 };
             g20.Company = new List<Company> { c11 };
             g21.Company = new List<Company> { c17 };
+            g22.Company = new List<Company> { c3 };
+            g23.Company = new List<Company> { c2 };
+            g24.Company = new List<Company> { c5 };
+            g25.Company = new List<Company> { c8 };
             
             g1.Genres = new List<Genre> { gen8 };            
             g2.Genres = new List<Genre> { gen2};            
@@ -127,16 +136,20 @@ namespace MyDatabase.Initializers
             g18.Genres = new List<Genre> { gen2 };            
             g19.Genres = new List<Genre> { gen2 };            
             g20.Genres = new List<Genre> { gen9 };            
-            g21.Genres = new List<Genre> { gen10 };
+            g21.Genres = new List<Genre> { gen10 };          
+            g22.Genres = new List<Genre> { gen2 };          
+            g23.Genres = new List<Genre> { gen9 };          
+            g24.Genres = new List<Genre> { gen2 };          
+            g25.Genres = new List<Genre> { gen11 };
             
             c1.Games = new List<Game> { g4, g5, g10, g11, g15 };
-            c2.Games = new List<Game> { };
-            c3.Games = new List<Game> { };
+            c2.Games = new List<Game> { g22 };
+            c3.Games = new List<Game> { g23 };
             c4.Games = new List<Game> { g16 };
-            c5.Games = new List<Game> { };
+            c5.Games = new List<Game> { g24 };
             c6.Games = new List<Game> { g17 };
             c7.Games = new List<Game> { g2 };
-            c8.Games = new List<Game> { };
+            c8.Games = new List<Game> { g25 };
             c9.Games = new List<Game> { g1};
             c10.Games = new List<Game> { g6, g7 };
             c11.Games = new List<Game> { g8, g20 };
