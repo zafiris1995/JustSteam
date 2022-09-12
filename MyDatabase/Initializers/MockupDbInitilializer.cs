@@ -129,6 +129,24 @@ namespace MyDatabase.Initializers
             g20.Genres = new List<Genre> { gen9 };            
             g21.Genres = new List<Genre> { gen10 };
             
+            c1.Games = new List<Game> { g4, g5, g10, g11, g15 };
+            c2.Games = new List<Game> { };
+            c3.Games = new List<Game> { };
+            c4.Games = new List<Game> { g16 };
+            c5.Games = new List<Game> { };
+            c6.Games = new List<Game> { g17 };
+            c7.Games = new List<Game> { g2 };
+            c8.Games = new List<Game> { };
+            c9.Games = new List<Game> { g1};
+            c10.Games = new List<Game> { g6, g7 };
+            c11.Games = new List<Game> { g8, g20 };
+            c12.Games = new List<Game> { g9, g14 };
+            c13.Games = new List<Game> { g12 };
+            c14.Games = new List<Game> { g13 };
+            c15.Games = new List<Game> { g18 };
+            c16.Games = new List<Game> { g19};
+            c17.Games = new List<Game> { g3, g21 };
+            
             #endregion
 
         }
