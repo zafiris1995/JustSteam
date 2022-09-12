@@ -38,12 +38,12 @@ namespace MyDatabase.Initializers
             Game g21 = new Game() { Title = "MultiVersus", Price = 50, Rating = 7, ReleaseDate = new DateTime(2022/08/15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/MultiVersus_Cover_Art.png"  };
             Game g22 = new Game() {Title = "Fallout", Price = 30, Rating = 9, ReleaseDate = new DateTime (1997,10,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/af/Fallout.jpg?20210820180451" };
             Game g23 = new Game() {Title = "League of Legends",  Rating = 6, Price = 0, ReleaseDate = new DateTime (2013,03,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/League_of_Legends_2019_vector.svg/900px-League_of_Legends_2019_vector.svg.png" };
-            Game g24 = new Game() {Title = "Far Cry", Price = 15, Rating = 9, ReleaseDate = new DateTime(2004,03,23) PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a5/Far_Cry_1_boxshot.jpg" };
+            Game g24 = new Game() {Title = "Far Cry", Price = 15, Rating = 9, ReleaseDate = new DateTime(2004,03,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a5/Far_Cry_1_boxshot.jpg" };
             Game g25 = new Game() {Title = "Sonic the Hedgehog", Rating = 4, Price = 8, ReleaseDate = new DateTime(1991,06,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?20150330215349" };
             Game g26 = new Game() {Title = "World of Warcraft", Rating = 6, Price = 18, ReleaseDate = new DateTime(2004,11,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png" };
 
             
-            context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21);
+            context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26);
             context.SaveChanges();
 
             #endregion
@@ -62,7 +62,7 @@ namespace MyDatabase.Initializers
             Genre gen10 = new Genre() { Kind = "Fighting" };
             Genre gen11 = new Genre() { Kind = "Platform" };
 
-            context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8);
+            context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8, gen9, gen10, gen11);
             context.SaveChanges();
             #endregion
 
