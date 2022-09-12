@@ -39,7 +39,9 @@ namespace MyDatabase.Initializers
             Game g22 = new Game() {Title = "Fallout", Price = 30, Rating = 9, ReleaseDate = new DateTime (1997,10,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/af/Fallout.jpg?20210820180451" };
             Game g23 = new Game() {Title = "League of Legends",  Rating = 6, Price = 0, ReleaseDate = new DateTime (2013,03,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/League_of_Legends_2019_vector.svg/900px-League_of_Legends_2019_vector.svg.png" };
             Game g24 = new Game() {Title = "Far Cry", Price = 15, Rating = 9, ReleaseDate = new DateTime(2004,03,23) PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a5/Far_Cry_1_boxshot.jpg" };
-            Game g25 = new Game() {Title = "Sonic the Hedgehog" , Price = 8, ReleaseDate = new DateTime(1991,06,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?20150330215349" };
+            Game g25 = new Game() {Title = "Sonic the Hedgehog", Rating = 4, Price = 8, ReleaseDate = new DateTime(1991,06,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?20150330215349" };
+            Game g26 = new Game() {Title = "World of Warcraft", Rating = 6, Price = 18, ReleaseDate = new DateTime(2004,11,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png" };
+
             
             context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21);
             context.SaveChanges();
@@ -115,6 +117,7 @@ namespace MyDatabase.Initializers
             g23.Company = new List<Company> { c2 };
             g24.Company = new List<Company> { c5 };
             g25.Company = new List<Company> { c8 };
+            g26.Company = new List<Company> { c1 };
             
             g1.Genres = new List<Genre> { gen8 };            
             g2.Genres = new List<Genre> { gen2};            
@@ -140,9 +143,10 @@ namespace MyDatabase.Initializers
             g22.Genres = new List<Genre> { gen2 };          
             g23.Genres = new List<Genre> { gen9 };          
             g24.Genres = new List<Genre> { gen2 };          
-            g25.Genres = new List<Genre> { gen11 };
+            g25.Genres = new List<Genre> { gen11 };        
+            g26.Genres = new List<Genre> { gen8 };
             
-            c1.Games = new List<Game> { g4, g5, g10, g11, g15 };
+            c1.Games = new List<Game> { g4, g5, g10, g11, g15, g26 };
             c2.Games = new List<Game> { g22 };
             c3.Games = new List<Game> { g23 };
             c4.Games = new List<Game> { g16 };
@@ -159,6 +163,18 @@ namespace MyDatabase.Initializers
             c15.Games = new List<Game> { g18 };
             c16.Games = new List<Game> { g19};
             c17.Games = new List<Game> { g3, g21 };
+            
+            gen1.Games = new List<Game> { g5, g11, g15};
+            gen2.Games = new List<Game> { g2, g8, g18, g19, g22, g24};
+            gen3.Games = new List<Game> { g3 };
+            gen4.Games = new List<Game> { g5, g6, g7, g11, g12, g15, g17};
+            gen5.Games = new List<Game> { g13, g14, g16};
+            gen6.Games = new List<Game> { g4, g9, g10};
+            gen7.Games = new List<Game> { g26 };
+            gen8.Games = new List<Game> { g26 };
+            gen9.Games = new List<Game> { g20, g23 };
+            gen10.Games = new List<Game> { g21 };
+            gen11.Games = new List<Game> { g25 };
             
             #endregion
 
