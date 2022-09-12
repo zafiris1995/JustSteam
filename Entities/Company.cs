@@ -10,6 +10,7 @@ namespace Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string PhotoUrl {get; set; }
 
         // Navigation Props
         public virtual ICollection<Game> Games { get; set; }
