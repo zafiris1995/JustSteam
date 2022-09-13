@@ -14,6 +14,7 @@ namespace Entities
         public int Rating { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string PhotoUrl { get; set; }
+        public string VideoUrl { get; set; }
 
         // Navigation Props
 
