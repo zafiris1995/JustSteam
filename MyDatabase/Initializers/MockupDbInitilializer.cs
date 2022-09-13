@@ -1,4 +1,4 @@
-﻿using Entities;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -76,15 +76,7 @@ namespace MyDatabase.Initializers
             Game g59 = new Game() (Title = "Worms 2", Rating = 7, Price = 7, ReleaseDate = new DateTime(1997,11,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/8e/Worms2-cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=CxJbWrTlGR0" };
             Game g60 = new Game() (Title = "Worms Armageddon", Rating = 9, Price = 7, ReleaseDate = new DateTime(1999,11,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e5/Wa-win-cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=Xl2Oox2a58k" };
 
-            
-            
-            
-            
-            
-            
-            
-            
-            Game g = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            //Game g = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
             
             context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26);
             context.SaveChanges();
@@ -175,7 +167,7 @@ namespace MyDatabase.Initializers
             g19.Company = c16;
             g20.Company = c11;
             g21.Company = c17;
-            g22.Company = c3;
+            g22.Company = c18;
             g23.Company = c2;
             g24.Company = c5;
             g25.Company = c8;
@@ -293,8 +285,25 @@ namespace MyDatabase.Initializers
             c13.Games = new List<Game> { g12 };
             c14.Games = new List<Game> { g13 };
             c15.Games = new List<Game> { g18 };
-            c16.Games = new List<Game> { g19};
+            c16.Games = new List<Game> { g19 };
             c17.Games = new List<Game> { g3, g21 };
+            c18.Games = new List<Game> { g22 };
+            c19.Games = new List<Game> { g27, g28 };
+            c20.Games = new List<Game> { g30 };
+            c21.Games = new List<Game> { g31 };
+            c22.Games = new List<Game> { g32 };
+            c23.Games = new List<Game> { g34 };
+            c24.Games = new List<Game> { g35};
+            c25.Games = new List<Game> { g36, g37, g38 };
+            c26.Games = new List<Game> { g42, g43 };
+            c27.Games = new List<Game> { g44 };
+            c28.Games = new List<Game> { g45 };
+            c29.Games = new List<Game> { g50 };
+            c30.Games = new List<Game> { g51 };
+            c31.Games = new List<Game> { g52 };
+            c32.Games = new List<Game> { g53, g54, g55, g56, g57};
+            c33.Games = new List<Game> { g58 };
+            c34.Games = new List<Game> { g59, g60 };
             
             // Adding games to genres
             gen1.Games = new List<Game> { g5, g11, g15};
@@ -308,6 +317,7 @@ namespace MyDatabase.Initializers
             gen9.Games = new List<Game> { g20, g23 };
             gen10.Games = new List<Game> { g21 };
             gen11.Games = new List<Game> { g25 };
+            gen12.Games = new List<Game> { };
             
             #endregion
 
