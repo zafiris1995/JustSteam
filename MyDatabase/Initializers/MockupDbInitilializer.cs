@@ -62,7 +62,7 @@ namespace MyDatabase.Initializers
             Game g45 = new Game() (Title = "Cult of the Lamb", Rating = 4, Price = 13, ReleaseDate = new DateTime(2022,08,11), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/d/d4/Cult_of_the_Lamb_Key_Art.png", VideoUrl = "https://www.youtube.com/watch?v=xsPtUNB1z-Q" };
             Game g46 = new Game() (Title = "Starcraft II: Heart of the Swarm", Rating = 7, Price = 15, ReleaseDate = new DateTime(2013,03,12), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/b8/SC2_Heart_of_the_Swarm_cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=MVbeoSPqRs4" };
             Game g47 = new Game() (Title = "Starcraft II: Legacy of the Void", Rating = 8, Price = 15, ReleaseDate = new DateTime(2015,11,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/77/StarCraft_II_-_Legacy_of_the_Void_cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=M_XwzBMTJaM" };
-            Game g48 = new Game() (Title = "Starcraft: Brood Wars", Rating = , Price = , ReleaseDate = new DateTime(1998,12,18), PhotoUrl = "", VideoUrl = "" };
+            Game g48 = new Game() (Title = "Starcraft: Brood Wars", Rating = , Price = , ReleaseDate = new DateTime(1998,12,18), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/89/Brood_War_box_art_%28StarCraft%29.jpg", VideoUrl = "" };
             Game g49 = new Game() (Title = "Simcity", Rating = 7, Price = 3, ReleaseDate = new DateTime(1989,02,02), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/7b/SimCity_Classic_cover_art.jpg", VideoUrl = "" };
             Game g50 = new Game() (Title = "RollerCoaster Tycoon", Rating = ,5 Price = 5, ReleaseDate = new DateTime(1999,04,12), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/Rct-box.jpg", VideoUrl = "" };
 
