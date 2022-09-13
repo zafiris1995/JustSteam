@@ -73,8 +73,8 @@ namespace MyDatabase.Initializers
             Game g56 = new Game() (Title = "Warhammer 40,000: Dawn of War - Soulstorm", Rating = 7, Price = 10, ReleaseDate = new DateTime(2008,03,07), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/30/Soulstorm_Coverart.jpg", VideoUrl = "https://www.youtube.com/watch?v=Uh9W8QIei8A" };
             Game g57 = new Game() (Title = "Warhammer 40,000: Dawn of War II", Rating = 6, Price = 10, ReleaseDate = new DateTime(2009,02,20), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/0/0e/Warhammer_40%2C000_Dawn_of_War_II.jpg", VideoUrl = "https://www.youtube.com/watch?v=OTjyO_FncE4" };
             Game g58 = new Game() (Title = "Heroes of Might and Magic II", Rating = 4, Price = 5, ReleaseDate = new DateTime(1996,10,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/9/90/Heroes_2_cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=pQIyUl3RL7w" };
-            Game g59 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g60 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g59 = new Game() (Title = "Worms 2", Rating = 7, Price = 7, ReleaseDate = new DateTime(1997,11,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/8e/Worms2-cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=CxJbWrTlGR0" };
+            Game g60 = new Game() (Title = "Worms Armageddon", Rating = 9, Price = 7, ReleaseDate = new DateTime(1999,11,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e5/Wa-win-cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=Xl2Oox2a58k" };
 
             
             
