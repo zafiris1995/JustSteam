@@ -317,7 +317,7 @@ namespace MyDatabase.Initializers
             gen9.Games = new List<Game> { g20, g23 };
             gen10.Games = new List<Game> { g21 };
             gen11.Games = new List<Game> { g25 };
-            gen12.Games = new List<Game> { };
+            gen12.Games = new List<Game> { g27, g28, g33, g40, g41, g42, g43 };
             
             #endregion
 
