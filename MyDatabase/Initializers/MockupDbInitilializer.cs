@@ -15,33 +15,66 @@ namespace MyDatabase.Initializers
         {
             #region Game Seeding
 
-            Game g1 = new Game() { Title = "Fifa 23", Price = 10 , Rating = 10, ReleaseDate = new DateTime(2022,09,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a6/FIFA_23_Cover.jpg" };
-            Game g2 = new Game() { Title = "The Legend of Zelda", Price = 5, Rating = 3, ReleaseDate = new DateTime(1986,02,21), PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/d/d0/Zelda_Cover_Europe.jpg"  };
-            Game g3 = new Game() { Title = "Tetris", Price = 3, Rating = 6, ReleaseDate = new DateTime(1986,01,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/8/8d/NES_Tetris_Box_Front.jpg"   };
-            Game g4 = new Game() { Title = "Starcraft", Price = 10, Rating = 9, ReleaseDate = new DateTime(1998,03,31), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/9/93/StarCraft_box_art.jpg" };
-            Game g5 = new Game() { Title = "Diablo", Price = 5, Rating = 5, ReleaseDate = new DateTime(1997,01,03), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/3a/Diablo_Coverart.png"  };
-            Game g6 = new Game() { Title = "Mass Effect", Price = 20, Rating = 5, ReleaseDate = new DateTime(2007,11,20), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e8/MassEffect.jpg"  };
-            Game g7 = new Game() { Title = "Dragon Age: Origins", Price = 10, Rating = 10, ReleaseDate = new DateTime(2009,11,03), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/89/Dragon_Age_Origins_cover.png"  };
-            Game g8 = new Game() { Title = "Half-Life", Price = 70, Rating = 1, ReleaseDate = new DateTime(1998,11,19), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg"  };
-            Game g9 = new Game() { Title = "Age of Empires II", Price = 15, Rating = 3, ReleaseDate = new DateTime(1999,09,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png"  };
-            Game g10 = new Game() { Title = "Starcraft II", Price = 20, Rating = 4, ReleaseDate = new DateTime(2010,07,27), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg"  };
-            Game g11 = new Game() { Title = "Diablo II", Price = 10, Rating = 5, ReleaseDate = new DateTime(2000,06,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png"  };
-            Game g12 = new Game() { Title = "Pathfinder: Kingmaker", Price = 30, Rating = 3, ReleaseDate = new DateTime(2018,09,25), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e6/Pathfinder_Kingmaker_cover_art.jpg"  };
-            Game g13 = new Game() { Title = "Oxygen Not Included", Price = 25, Rating = 8, ReleaseDate = new DateTime(2019,07,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/f6/Oxygen_Not_Included_cover_art.jpg"  };
-            Game g14 = new Game() { Title = "Minecraft", Price = 30, Rating = 8, ReleaseDate = new DateTime(2009,05,17), PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/8/82/Minecraft_cover.jpg"  };
-            Game g15 = new Game() { Title = "Diablo III", Price = 15, Rating = 4, ReleaseDate = new DateTime(2012,05,15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png"  };
-            Game g16 = new Game() { Title = "Cities: Skylines", Price = 20, Rating = 6, ReleaseDate = new DateTime(2015,03,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/58/Cities_Skylines_cover_art.jpg"  };
-            Game g17 = new Game() { Title = "Final Fantasy VII", Price = 7, Rating = 3, ReleaseDate = new DateTime(1997,01,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/c/c2/Final_Fantasy_VII_Box_Art.jpg"  };
-            Game g18 = new Game() { Title = "Resident Evil", Price = 9, Rating = 4, ReleaseDate = new DateTime(1996/03/22), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a6/Resident_Evil_1_cover.png"  };
-            Game g19 = new Game() { Title = "The Secret of Monkey Island", Price = 15, Rating = 10, ReleaseDate = new DateTime(1990/10/01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a8/The_Secret_of_Monkey_Island_artwork.jpg"  };
-            Game g20 = new Game() { Title = "DotA 2", Price = 60, Rating = 5, ReleaseDate = new DateTime(2013/07/09), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/0/0b/Dota_2_%28Steam_2019%29.jpg"  };
-            Game g21 = new Game() { Title = "MultiVersus", Price = 50, Rating = 7, ReleaseDate = new DateTime(2022/08/15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/MultiVersus_Cover_Art.png"  };
-            Game g22 = new Game() {Title = "Fallout", Price = 30, Rating = 9, ReleaseDate = new DateTime (1997,10,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/af/Fallout.jpg?20210820180451" };
-            Game g23 = new Game() {Title = "League of Legends",  Rating = 6, Price = 0, ReleaseDate = new DateTime (2013,03,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/League_of_Legends_2019_vector.svg/900px-League_of_Legends_2019_vector.svg.png" };
-            Game g24 = new Game() {Title = "Far Cry", Price = 15, Rating = 9, ReleaseDate = new DateTime(2004,03,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a5/Far_Cry_1_boxshot.jpg" };
-            Game g25 = new Game() {Title = "Sonic the Hedgehog", Rating = 4, Price = 8, ReleaseDate = new DateTime(1991,06,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?20150330215349" };
+            Game g1 = new Game() { Title = "Fifa 23", Price = 10 , Rating = 10, ReleaseDate = new DateTime(2022,09,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a6/FIFA_23_Cover.jpg", VideoUrl = "" };
+            Game g2 = new Game() { Title = "The Legend of Zelda", Price = 5, Rating = 3, ReleaseDate = new DateTime(1986,02,21), PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/d/d0/Zelda_Cover_Europe.jpg", VideoUrl = "" };
+            Game g3 = new Game() { Title = "Tetris", Price = 3, Rating = 6, ReleaseDate = new DateTime(1986,01,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/8/8d/NES_Tetris_Box_Front.jpg", VideoUrl = "" };
+            Game g4 = new Game() { Title = "Starcraft", Price = 10, Rating = 9, ReleaseDate = new DateTime(1998,03,31), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/9/93/StarCraft_box_art.jpg", VideoUrl = "" };
+            Game g5 = new Game() { Title = "Diablo", Price = 5, Rating = 5, ReleaseDate = new DateTime(1997,01,03), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/3a/Diablo_Coverart.png", VideoUrl = "" };
+            Game g6 = new Game() { Title = "Mass Effect", Price = 20, Rating = 5, ReleaseDate = new DateTime(2007,11,20), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e8/MassEffect.jpg", VideoUrl = "" };
+            Game g7 = new Game() { Title = "Dragon Age: Origins", Price = 10, Rating = 10, ReleaseDate = new DateTime(2009,11,03), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/89/Dragon_Age_Origins_cover.png", VideoUrl = "" };
+            Game g8 = new Game() { Title = "Half-Life", Price = 70, Rating = 1, ReleaseDate = new DateTime(1998,11,19), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg", VideoUrl = "" };
+            Game g9 = new Game() { Title = "Age of Empires II", Price = 15, Rating = 3, ReleaseDate = new DateTime(1999,09,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png", VideoUrl = "" };
+            Game g10 = new Game() { Title = "Starcraft II", Price = 20, Rating = 4, ReleaseDate = new DateTime(2010,07,27), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg", VideoUrl = "" };
+            Game g11 = new Game() { Title = "Diablo II", Price = 10, Rating = 5, ReleaseDate = new DateTime(2000,06,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png", VideoUrl = "" };
+            Game g12 = new Game() { Title = "Pathfinder: Kingmaker", Price = 30, Rating = 3, ReleaseDate = new DateTime(2018,09,25), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e6/Pathfinder_Kingmaker_cover_art.jpg", VideoUrl = "" };
+            Game g13 = new Game() { Title = "Oxygen Not Included", Price = 25, Rating = 8, ReleaseDate = new DateTime(2019,07,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/f6/Oxygen_Not_Included_cover_art.jpg", VideoUrl = "" };
+            Game g14 = new Game() { Title = "Minecraft", Price = 30, Rating = 8, ReleaseDate = new DateTime(2009,05,17), PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/8/82/Minecraft_cover.jpg", VideoUrl = "" };
+            Game g15 = new Game() { Title = "Diablo III", Price = 15, Rating = 4, ReleaseDate = new DateTime(2012,05,15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png", VideoUrl = "" };
+            Game g16 = new Game() { Title = "Cities: Skylines", Price = 20, Rating = 6, ReleaseDate = new DateTime(2015,03,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/58/Cities_Skylines_cover_art.jpg" , VideoUrl = "" };
+            Game g17 = new Game() { Title = "Final Fantasy VII", Price = 7, Rating = 3, ReleaseDate = new DateTime(1997,01,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/c/c2/Final_Fantasy_VII_Box_Art.jpg", VideoUrl = "" };
+            Game g18 = new Game() { Title = "Resident Evil", Price = 9, Rating = 4, ReleaseDate = new DateTime(1996/03/22), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a6/Resident_Evil_1_cover.png", VideoUrl = "" };
+            Game g19 = new Game() { Title = "The Secret of Monkey Island", Price = 15, Rating = 10, ReleaseDate = new DateTime(1990/10/01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a8/The_Secret_of_Monkey_Island_artwork.jpg", VideoUrl = "" };
+            Game g20 = new Game() { Title = "DotA 2", Price = 60, Rating = 5, ReleaseDate = new DateTime(2013/07/09), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/0/0b/Dota_2_%28Steam_2019%29.jpg", VideoUrl = "" };
+            Game g21 = new Game() { Title = "MultiVersus", Price = 50, Rating = 7, ReleaseDate = new DateTime(2022/08/15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/MultiVersus_Cover_Art.png" , VideoUrl = "" };
+            Game g22 = new Game() {Title = "Fallout", Price = 30, Rating = 9, ReleaseDate = new DateTime (1997,10,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/af/Fallout.jpg?20210820180451", VideoUrl = "" };
+            Game g23 = new Game() {Title = "League of Legends",  Rating = 6, Price = 0, ReleaseDate = new DateTime (2013,03,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/League_of_Legends_2019_vector.svg/900px-League_of_Legends_2019_vector.svg.png", VideoUrl = "" };
+            Game g24 = new Game() {Title = "Far Cry", Price = 15, Rating = 9, ReleaseDate = new DateTime(2004,03,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a5/Far_Cry_1_boxshot.jpg", VideoUrl = "" };
+            Game g25 = new Game() {Title = "Sonic the Hedgehog", Rating = 4, Price = 8, ReleaseDate = new DateTime(1991,06,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?20150330215349", VideoUrl = "" };
             Game g26 = new Game() {Title = "World of Warcraft", Rating = 6, Price = 18, ReleaseDate = new DateTime(2004,11,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png" };
+            Game g27 = new Game() (Title = "Doom", Rating = 6, Price = 20, ReleaseDate = new DateTime(1993,12,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/57/Doom_cover_art.jpg", VideoUrl = "https://www.youtube.com/watch?v=PHYcm9mTY4k" };
+            Game g28 = new Game() (Title = "Quake III", Rating = 8, Price = 30, ReleaseDate = new DateTime(1999,12,02), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a1/Quake3Title.jpg", VideoUrl = "https://www.youtube.com/watch?v=NsL32y--h00" };
+            Game g29 = new Game() (Title = "The Sims", Rating = 3, Price = 5, ReleaseDate = new DateTime(2000,02,11), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/2/22/The_Sims_Coverart.png", VideoUrl = "https://www.youtube.com/watch?v=tEOo9a2twkU" };
+            Game g30 = new Game() (Title = "Baldur's Gate II: Shadows of Amn", Rating = 8, Price = 25, ReleaseDate = new DateTime(2000,09,29), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/17/Baldur%27s_Gate_II_-_Shadows_of_Amn_Coverart.png", VideoUrl = "https://www.youtube.com/watch?v=tONHtATupkw" };
+            Game g31 = new Game() (Title = "Dungeon Keeper 2", Rating = 7, Price = 10, ReleaseDate = new DateTime(1999,06,20), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/4/48/Dungeon_Keeper_2_-_cover_art.jpg", VideoUrl = "https://www.youtube.com/watch?v=RntjbewkoQc" };
+            Game g32 = new Game() (Title = "Black & White", Rating = 9, Price = ,30 ReleaseDate = new DateTime(2001,03,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/7b/Black_%26_White_Coverart.png", VideoUrl = "https://www.youtube.com/watch?v=dm2kTfwT9HU" };
+            Game g33 = new Game() (Title = "Counter-Strike", Rating = 5, Price = 10, ReleaseDate = new DateTime(2000,11,09), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/67/Counter-Strike_Box.jpg", VideoUrl = "https://www.youtube.com/watch?v=bvI62FUDpKA" };
+            Game g34 = new Game() (Title = "Command & Conquer: Red Alert 2", Rating = 4, Price = 5, ReleaseDate = new DateTime(2000,09,27), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/11/Cncra2-win-cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=2YlVumsPHx4" };
+            Game g35 = new Game() (Title = "Icewind Dale", Rating = 7, Price = 25, ReleaseDate = new DateTime(2000,06,29), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/38/Icewind_dale_1_box_shot.jpgv", VideoUrl = "https://www.youtube.com/watch?v=jb_3cg17TXw" };
+            Game g36 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g37 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g38 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g39 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g40 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g41 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g42 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g43 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g44 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g45 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g46 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g47 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g48 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g49 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g50 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
 
+            
+            
+            
+            
+            
+            
+            
+            
+            Game g = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
             
             context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26);
             context.SaveChanges();
@@ -91,7 +124,8 @@ namespace MyDatabase.Initializers
             #endregion
 
             #region Populating Lists
-
+            
+            // Adding companies to games
             g1.Company = c9;
             g2.Company = c7;
             g3.Company = c17;
@@ -119,6 +153,7 @@ namespace MyDatabase.Initializers
             g25.Company = c8;
             g26.Company = c1;
             
+            // Adding genres to games
             g1.Genres = new List<Genre> { gen8 };            
             g2.Genres = new List<Genre> { gen2};            
             g3.Genres = new List<Genre> { gen3 };            
@@ -146,6 +181,7 @@ namespace MyDatabase.Initializers
             g25.Genres = new List<Genre> { gen11 };        
             g26.Genres = new List<Genre> { gen8 };
             
+            // Adding games to companies           
             c1.Games = new List<Game> { g4, g5, g10, g11, g15, g26 };
             c2.Games = new List<Game> { g22 };
             c3.Games = new List<Game> { g23 };
@@ -164,6 +200,7 @@ namespace MyDatabase.Initializers
             c16.Games = new List<Game> { g19};
             c17.Games = new List<Game> { g3, g21 };
             
+            // Adding games to genres
             gen1.Games = new List<Game> { g5, g11, g15};
             gen2.Games = new List<Game> { g2, g8, g18, g19, g22, g24};
             gen3.Games = new List<Game> { g3 };
