@@ -24,7 +24,7 @@ namespace MyDatabase.Initializers
             Game g7 = new Game() { Title = "Dragon Age: Origins", Price = 10, Rating = 10, ReleaseDate = new DateTime(2009,11,03), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/89/Dragon_Age_Origins_cover.png", VideoUrl = "" };
             Game g8 = new Game() { Title = "Half-Life", Price = 70, Rating = 1, ReleaseDate = new DateTime(1998,11,19), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg", VideoUrl = "" };
             Game g9 = new Game() { Title = "Age of Empires II", Price = 15, Rating = 3, ReleaseDate = new DateTime(1999,09,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png", VideoUrl = "" };
-            Game g10 = new Game() { Title = "Starcraft II", Price = 20, Rating = 4, ReleaseDate = new DateTime(2010,07,27), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg", VideoUrl = "" };
+            Game g10 = new Game() { Title = "Starcraft II: Wings of Liberty", Price = 20, Rating = 8, ReleaseDate = new DateTime(2010,07,27), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg", VideoUrl = "https://www.youtube.com/watch?v=VSGmPpidDvo" };
             Game g11 = new Game() { Title = "Diablo II", Price = 10, Rating = 5, ReleaseDate = new DateTime(2000,06,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png", VideoUrl = "" };
             Game g12 = new Game() { Title = "Pathfinder: Kingmaker", Price = 30, Rating = 3, ReleaseDate = new DateTime(2018,09,25), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e6/Pathfinder_Kingmaker_cover_art.jpg", VideoUrl = "" };
             Game g13 = new Game() { Title = "Oxygen Not Included", Price = 25, Rating = 8, ReleaseDate = new DateTime(2019,07,30), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/f6/Oxygen_Not_Included_cover_art.jpg", VideoUrl = "" };
@@ -50,21 +50,21 @@ namespace MyDatabase.Initializers
             Game g33 = new Game() (Title = "Counter-Strike", Rating = 5, Price = 10, ReleaseDate = new DateTime(2000,11,09), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/67/Counter-Strike_Box.jpg", VideoUrl = "https://www.youtube.com/watch?v=bvI62FUDpKA" };
             Game g34 = new Game() (Title = "Command & Conquer: Red Alert 2", Rating = 4, Price = 5, ReleaseDate = new DateTime(2000,09,27), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/11/Cncra2-win-cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=2YlVumsPHx4" };
             Game g35 = new Game() (Title = "Icewind Dale", Rating = 7, Price = 25, ReleaseDate = new DateTime(2000,06,29), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/38/Icewind_dale_1_box_shot.jpgv", VideoUrl = "https://www.youtube.com/watch?v=jb_3cg17TXw" };
-            Game g36 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g37 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g38 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g39 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g40 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g41 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g42 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g43 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g44 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g45 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g46 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g47 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g48 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g49 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
-            Game g50 = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
+            Game g36 = new Game() (Title = "Civilization IV", Rating = 1, Price = 15, ReleaseDate = new DateTime(2005,11,04), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/7e/CivIVboxshot.jpg", VideoUrl = "https://www.youtube.com/watch?v=EuiM7Ycbm-k" };
+            Game g37 = new Game() (Title = "Civilization III", Rating = 7, Price = 5, ReleaseDate = new DateTime(2002,03,01), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/7a/Civilization_III_Coverart.png", VideoUrl = "https://www.youtube.com/watch?v=3uE6HLIU0sA" };
+            Game g38 = new Game() (Title = "Civilization V", Rating = 9, Price = 25, ReleaseDate = new DateTime(2010,11,23), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/5c/CIVILIZATION-V-FRONT-OF-BOX.jpg", VideoUrl = "https://www.youtube.com/watch?v=4lEfl_OebvQ" };
+            Game g39 = new Game() (Title = "Star Wars: Knights of the Old Republic", Rating = 9, Price = 10, ReleaseDate = new DateTime(2003,07,15), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/11/Kotorbox.jpg", VideoUrl = "https://www.youtube.com/watch?v=QgbMAdtp7aE" };
+            Game g40 = new Game() (Title = "Mass Effect 2", Rating = 7, Price = 20, ReleaseDate = new DateTime(2010,01,26), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/0/05/MassEffect2_cover.PNG", VideoUrl = "https://www.youtube.com/watch?v=lx9sPQpjgjU" };
+            Game g41 = new Game() (Title = "Mass Effect 3", Rating = 5, Price = 30, ReleaseDate = new DateTime(2012,03,06), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/b0/Mass_Effect_3_Game_Cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=AluTOOCVXVQ" };
+            Game g42 = new Game() (Title = "Red Dead Redemption", Rating = 4, Price = 15, ReleaseDate = new DateTime(2010,05,18), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a7/Red_Dead_Redemption.jpg", VideoUrl = "https://www.youtube.com/watch?v=-o7rES_3ymA" };
+            Game g43 = new Game() (Title = "Red Dead Redemption 2", Rating = 9, Price = 40, ReleaseDate = new DateTime(2019,11,05), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg", VideoUrl = "https://www.youtube.com/watch?v=eaW0tYpxyp0" };
+            Game g44 = new Game() (Title = "Hades", Rating = 7, Price = 20, ReleaseDate = new DateTime(2021,09,13), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/c/cc/Hades_cover_art.jpg", VideoUrl = "https://www.youtube.com/watch?v=91t0ha9x0AE" };
+            Game g45 = new Game() (Title = "Cult of the Lamb", Rating = 4, Price = 13, ReleaseDate = new DateTime(2022,08,11), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/d/d4/Cult_of_the_Lamb_Key_Art.png", VideoUrl = "https://www.youtube.com/watch?v=xsPtUNB1z-Q" };
+            Game g46 = new Game() (Title = "Starcraft II: Heart of the Swarm", Rating = 7, Price = 15, ReleaseDate = new DateTime(2013,03,12), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/b/b8/SC2_Heart_of_the_Swarm_cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=MVbeoSPqRs4" };
+            Game g47 = new Game() (Title = "Starcraft II: Legacy of the Void", Rating = 8, Price = 15, ReleaseDate = new DateTime(2015,11,10), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/77/StarCraft_II_-_Legacy_of_the_Void_cover.jpg", VideoUrl = "https://www.youtube.com/watch?v=M_XwzBMTJaM" };
+            Game g48 = new Game() (Title = "Starcraft: Brood Wars", Rating = , Price = , ReleaseDate = new DateTime(1998,12,18), PhotoUrl = "", VideoUrl = "" };
+            Game g49 = new Game() (Title = "Simcity", Rating = 7, Price = 3, ReleaseDate = new DateTime(1989,02,02), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/7/7b/SimCity_Classic_cover_art.jpg", VideoUrl = "" };
+            Game g50 = new Game() (Title = "RollerCoaster Tycoon", Rating = ,5 Price = 5, ReleaseDate = new DateTime(1999,04,12), PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/Rct-box.jpg", VideoUrl = "" };
 
             
             
