@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="home__title"><b>Best Movies</b> of this season</h1>
+                <h1 class="home__title"><b>Games</b></h1>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
         {
 
             <div class="home__card">
-                <a href="~/Customer/Movie/details/@game.Id">
+                <a href="~/Customer/CustomerGame/CustomerGameDetails/@game.Id">
                     <img src="@game.PhotoUrl" alt="">
                 </a>
                 <div>
@@ -43,7 +43,8 @@
 
 
 
-@Html.Action("DisplayGameCard", new { HeaderTitle = "Best Games" , games = Model.GetBestGames})
+@Html.Action("DisplayGameCard", new { HeaderTitle = "Best Games", games = Model.GetBestGames })
+
 
 
 

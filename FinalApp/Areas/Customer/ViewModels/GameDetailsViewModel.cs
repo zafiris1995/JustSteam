@@ -6,12 +6,8 @@ using System.Web;
 
 namespace FinalApp.Areas.Customer.ViewModels
 {
-    public class DisplayGameCard
+    public class GameDetailsViewModel
     {
-        public IEnumerable<Game> Games { get; set; }
-
-        public string HeaderTitle { get; set; }
-
-        
+        public Game Game { get; set; }
     }
 }

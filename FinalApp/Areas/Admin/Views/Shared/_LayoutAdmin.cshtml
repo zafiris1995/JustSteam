@@ -2,20 +2,20 @@
 
 <html>
 <head>
-    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_MetaHeader.cshtml")
+    @Html.Partial("~/Areas/Admin/Views/Shared/AdminComponents/_AdminMetaHeader.cshtml")
 </head>
 <body>
     <!-- header  -->
-    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_HeaderAdmin.cshtml")
+    @Html.Partial("~/Areas/Admin/Views/Shared/AdminComponents/_AdminHeader.cshtml")
     <!-- end header -->
     <!-- sidebar  -->
-    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_SideBarAdmin.cshtml")
+    @Html.Partial("~/Areas/Admin/Views/Shared/AdminComponents/_AdminSideBar.cshtml")
     <!-- end sidebar  -->
     <!-- BODY  -->
     @RenderBody()
     <!-- END BODY  -->
     <!-- JS -->
-    @Html.Partial("~/Areas/Admin/Views/Shared/Components/_JsLibrariesAdmin.cshtml")
+    @Html.Partial("~/Areas/Admin/Views/Shared/AdminComponents/_AdminJsLibraries.cshtml")
     <!-- End JS -->
     
 </body>

@@ -4,6 +4,7 @@ using RepositoryServices.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,30 +22,56 @@ namespace FinalApp.Areas.Customer.Controllers
         }
 
 
-        // GET: Customer/CustomerGame
-        public ActionResult Index()
+        public ActionResult HomePage()
         {
-            
-
             GameIndexViewModel givm = new GameIndexViewModel()
             {
                 Games = unit.Games.GetAll(),
-                //GetBestGames = unit.Games.GetBestGames()
-            };          
+                GetBestGames = unit.Games.GetBestGames()
+            };
 
             return View(givm);
         }
 
-
-        public ActionResult CustomerGameDetails()
+     
+        public ActionResult ShowAllGames()
         {
+            GameIndexViewModel givm = new GameIndexViewModel()
+            {
+                Games = unit.Games.GetAll(),
+                GetBestGames = unit.Games.GetBestGames()
+            };
 
 
-            return View();
+            return View(givm);
+        }
+
+        public ActionResult CustomerGameDetails(int? id)
+        {
+            
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Game game = db.Games.Find(id);
+            if (game == null)
+            {
+                return HttpNotFound();
+            }
+
+            GameDetailsViewModel gdvm = new GameDetailsViewModel()
+            {
+                Game = game
+            };
+
+            return View(gdvm);
+
+            
         }
 
 
-
+        [ChildActionOnly]
         public ActionResult DisplayGameCard(List<Game> games, string headerMessage)
         {
             DisplayGameCard dgc = new DisplayGameCard()
@@ -54,6 +81,13 @@ namespace FinalApp.Areas.Customer.Controllers
             };
             return View(dgc);
         }
+
+
+        //public ActionResult DisplayAllGames()
+        //{
+        //    return ();
+        //}
+        
 
     }
 }
