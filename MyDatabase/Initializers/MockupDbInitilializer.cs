@@ -78,7 +78,9 @@ namespace MyDatabase.Initializers
 
             //Game g = new Game() (Title = "", Rating = , Price = , ReleaseDate = new DateTime(,,), PhotoUrl = "", VideoUrl = "" };
             
-            context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26);
+            context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, 
+                                      g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40,
+                                      g41, g42, g43, g44, g45, g46, g47, g48, g49, g50, g51, g52, g53, g54, g55, g56, g57, g58, g59, g60);
             context.SaveChanges();
 
             #endregion
@@ -98,7 +100,7 @@ namespace MyDatabase.Initializers
             Genre gen11 = new Genre() { Kind = "Platform" };
             Genre gen12 = new Genre() { Kind = "Shooter" };
 
-            context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8, gen9, gen10, gen11);
+            context.Genres.AddOrUpdate(gen1, gen2, gen3, gen4, gen5, gen6, gen7, gen8, gen9, gen10, gen11, gen12);
             context.SaveChanges();
             #endregion
 
@@ -139,7 +141,7 @@ namespace MyDatabase.Initializers
             Company c33 = new Company() { Name = "New World Computing", PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/5f/New_World_Computing_%28logo%29.jpg" };
             Company c34 = new Company() { Name = "Team17", PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Team17_logo_%282018%29.svg/1280px-Team17_logo_%282018%29.svg.png" };
             
-            context.Companies.AddOrUpdate(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17);
+            context.Companies.AddOrUpdate(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,c31,c32,c33,c34);
             context.SaveChanges();
             #endregion
 
