@@ -48,7 +48,7 @@ namespace MyDatabase.Initializers
                 Rating = 9, 
                 ReleaseDate = new DateTime(1998, 03, 31), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/9/93/StarCraft_box_art.jpg", 
-                VideoUrl = "" 
+                VideoUrl = "https://www.youtube.com/watch?v=H4Z6Rmbtk1k"
             };
             Game g5 = new Game() 
             { 
@@ -57,7 +57,7 @@ namespace MyDatabase.Initializers
                 Rating = 5, 
                 ReleaseDate = new DateTime(1997, 01, 03), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/3a/Diablo_Coverart.png", 
-                VideoUrl = "" 
+                VideoUrl = "https://www.youtube.com/watch?v=o_Kr5i5F43U"
             };
 
             context.Games.AddOrUpdate(g1, g2, g3, g4, g5);
