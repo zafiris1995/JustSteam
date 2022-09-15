@@ -21,7 +21,8 @@ namespace MyDatabase.Initializers
                 Rating = 10, 
                 ReleaseDate = new DateTime(2022, 09, 30), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a6/FIFA_23_Cover.jpg", 
-                VideoUrl = "https://www.youtube.com/watch?v=o3V-GvvzjE4" 
+                VideoUrl = "https://www.youtube.com/watch?v=o3V-GvvzjE4",
+                
             };
             Game g2 = new Game() 
             { 
@@ -30,7 +31,8 @@ namespace MyDatabase.Initializers
                 Rating = 3, 
                 ReleaseDate = new DateTime(1986, 02, 21), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/d/d0/Zelda_Cover_Europe.jpg", 
-                VideoUrl = "" 
+                VideoUrl = "",
+                
             };
             Game g3 = new Game() 
             { 
@@ -119,24 +121,26 @@ namespace MyDatabase.Initializers
             g5.Company = c1;
 
             // Adding Genres to Games
-            g1.Genres = new List<Genre> { gen8 };
-            g2.Genres = new List<Genre> { gen2 };
-            g3.Genres = new List<Genre> { gen3 };
-            g4.Genres = new List<Genre> { gen6 };
-            g5.Genres = new List<Genre> { gen1, gen4 };
+            g1.Genres = new List<Genre>() { gen8 };
+            g2.Genres = new List<Genre>() { gen2 };
+            g3.Genres = new List<Genre>() { gen3 };
+            g4.Genres = new List<Genre>() { gen6 };
+            g5.Genres = new List<Genre>() { gen1, gen4 };
 
             // Adding Games to Companies
-            c1.Games = new List<Game> { g4, g5 };
-            c7.Games = new List<Game> { g2 };
-            c9.Games = new List<Game> { g1 };
-            c17.Games = new List<Game> { g3 };
+            c1.Games = new List<Game>() { g4, g5 };
+            c7.Games = new List<Game>() { g2 };
+            c9.Games = new List<Game>() { g1 };
+            c17.Games = new List<Game>() { g3 };
 
             // Adding Games to Genres
-            gen1.Games = new List<Game> { g5 };
-            gen2.Games = new List<Game> { g2 };
-            gen3.Games = new List<Game> { g3 };
-            gen4.Games = new List<Game> { g5 };
-            gen6.Games = new List<Game> { g4 };
+            gen1.Games = new List<Game>() { g5 , g1 };
+            gen2.Games = new List<Game>() { g2 };
+            gen3.Games = new List<Game>() { g3 };
+            gen4.Games = new List<Game>() { g5 };
+            gen6.Games = new List<Game>() { g4 };
+
+            context.SaveChanges();
 
             #endregion
         }
