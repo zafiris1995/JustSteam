@@ -20,7 +20,7 @@ namespace Entities
         // Navigation Props
 
         public virtual ICollection<Genre> Genres { get; set; }
-        public int CompanyId { get; set; }
+        //public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
     }
 }
