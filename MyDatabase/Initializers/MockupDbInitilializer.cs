@@ -121,7 +121,7 @@ namespace MyDatabase.Initializers
             g5.Company = c1;
 
             // Adding Genres to Games
-            g1.Genres = new List<Genre>() { gen8 };
+            g1.Genres = new List<Genre>() { gen7 };
             g2.Genres = new List<Genre>() { gen2 };
             g3.Genres = new List<Genre>() { gen3 };
             g4.Genres = new List<Genre>() { gen6 };
@@ -134,11 +134,12 @@ namespace MyDatabase.Initializers
             c17.Games = new List<Game>() { g3 };
 
             // Adding Games to Genres
-            gen1.Games = new List<Game>() { g5 , g1 };
+            gen1.Games = new List<Game>() { g5 };
             gen2.Games = new List<Game>() { g2 };
             gen3.Games = new List<Game>() { g3 };
             gen4.Games = new List<Game>() { g5 };
             gen6.Games = new List<Game>() { g4 };
+            gen7.Games = new List<Game>() { g1 };
 
             context.SaveChanges();
 

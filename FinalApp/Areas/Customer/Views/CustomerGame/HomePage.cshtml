@@ -27,10 +27,9 @@
                         <li>$@game.Price </li>
                         <li>@game.ReleaseDate</li>
                         <li>@game.Company.Name</li>
-                        @foreach (var item in Model.Games)
+                        @foreach (var item in game.Genres)
                         {
-                            
-
+                            <li>@item.Kind</li>
                         }
 
                     </ul>
