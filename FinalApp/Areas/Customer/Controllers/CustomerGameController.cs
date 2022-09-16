@@ -24,9 +24,13 @@ namespace FinalApp.Areas.Customer.Controllers
 
         public ActionResult HomePage()
         {
+
+            
+
             GameIndexViewModel givm = new GameIndexViewModel()
             {
                 Games = unit.Games.GetAll(),
+                
                 GetBestGames = unit.Games.GetBestGames()
             };
 
