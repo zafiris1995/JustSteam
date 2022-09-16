@@ -31,7 +31,7 @@ namespace MyDatabase.Initializers
                 Rating = 3, 
                 ReleaseDate = new DateTime(1986, 02, 21), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/d/d0/Zelda_Cover_Europe.jpg", 
-                VideoUrl = "",
+                VideoUrl = "https://www.youtube.com/watch?v=c4bvZZa5Mtg",
                 
             };
             Game g3 = new Game() 
@@ -41,7 +41,7 @@ namespace MyDatabase.Initializers
                 Rating = 6, 
                 ReleaseDate = new DateTime(1986, 01, 01), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/el/8/8d/NES_Tetris_Box_Front.jpg", 
-                VideoUrl = "" 
+                VideoUrl = "https://www.youtube.com/watch?v=QYIXBj7YMeA"
             };
             Game g4 = new Game() 
             { 
