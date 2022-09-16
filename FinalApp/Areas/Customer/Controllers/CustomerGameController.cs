@@ -29,8 +29,7 @@ namespace FinalApp.Areas.Customer.Controllers
 
             GameIndexViewModel givm = new GameIndexViewModel()
             {
-                Games = unit.Games.GetAll(),
-                
+                Games = unit.Games.GetAll(),               
                 GetBestGames = unit.Games.GetBestGames()
             };
 
