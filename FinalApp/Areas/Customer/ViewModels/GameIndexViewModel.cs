@@ -9,7 +9,7 @@ namespace FinalApp.Areas.Customer.ViewModels
     public class GameIndexViewModel
     {
         public IEnumerable<Game> Games { get; set; }
-        public IEnumerable<Genre> Genres { get; set; }
+       // public IEnumerable<Genre> Genres { get; set; }
         
         public IEnumerable<Game> GetBestGames { get; set; }
     }
