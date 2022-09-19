@@ -12,6 +12,11 @@ namespace MyDatabase.Initializers
     {
         protected override void Seed(ApplicationDbContext context)
         {
+
+
+            
+
+
             #region Game Seeding
 
             Game g1 = new Game() 

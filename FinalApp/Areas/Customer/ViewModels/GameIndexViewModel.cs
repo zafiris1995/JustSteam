@@ -12,5 +12,7 @@ namespace FinalApp.Areas.Customer.ViewModels
        // public IEnumerable<Genre> Genres { get; set; }
         
         public IEnumerable<Game> GetBestGames { get; set; }
+
+        public IEnumerable<string> AllGenres { get; set; }
     }
 }

@@ -38,11 +38,37 @@ namespace FinalApp.Areas.Customer.Controllers
         }
 
      
-        public ActionResult ShowAllGames()
+        public ActionResult ShowAllGames(string genreSearch, string yearSearch, string sortOptions )
         {
+
+            var games = unit.Games.GetAll().OrderBy(x => x.Title).ToList();
+            IEnumerable<Game> filteredGames = games.ToList();
+
+            //filtering
+
+            if (!string.IsNullOrEmpty(genreSearch))
+            {
+                filteredGames = filteredGames.Where(x => x.Genres.Select(y => y?.Kind).Contains(genreSearch));
+            }
+
+
+            //sorting 
+
+            switch (sortOptions)
+            {
+                case "AlphaAsc": filteredGames = filteredGames.OrderBy(x => x.Title).ToList(); break;
+                case "NewestAsc": filteredGames = filteredGames.OrderByDescending(x => x.ReleaseDate).ToList(); break;
+                case "OldestAsc": filteredGames = filteredGames.OrderBy(x => x.ReleaseDate).ToList(); break;
+                case "PriceAsc": filteredGames = filteredGames.OrderBy(x => x.Price).ToList(); break;
+                case "PriceDesc": filteredGames = filteredGames.OrderByDescending(x => x.Price).ToList(); break;
+                default: filteredGames = filteredGames.OrderBy(x => x.Title).ToList(); break;
+            }
+
+
             GameIndexViewModel givm = new GameIndexViewModel()
             {
-                Games = unit.Games.GetAll(),
+                Games = filteredGames,
+                AllGenres = games.SelectMany(x => x.Genres.Select(y => y.Kind != null ? y.Kind : "No Genre")).Distinct().OrderBy(x => x).ToList(),
                 GetBestGames = unit.Games.GetBestGames()
             };
 
