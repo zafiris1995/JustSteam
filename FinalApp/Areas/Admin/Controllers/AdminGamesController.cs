@@ -7,39 +7,21 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Entities;
-using FinalApp.Areas.Admin.ViewModels;
 using MyDatabase;
-using RepositoryServices.Persistance;
 
 namespace FinalApp.Areas.Admin.Controllers
 {
-    public class AdminGameController : Controller
+    public class AdminGamesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        UnitOfWork unit;
 
-        public AdminGameController()
-        {
-            unit = new UnitOfWork(db);
-        }
-
-
-
-        // GET: Admin/AdminGame
+        // GET: Admin/AdminGames
         public ActionResult Index()
         {
-
-            AdminIndexViewModel aivm = new AdminIndexViewModel()
-            {
-                Games = unit.Games.GetAll().ToList(),
-                AllGenres = db.Games.SelectMany(x => x.Genres.Select(y => y.Kind != null ? y.Kind : "No Genre")).Distinct().OrderBy(x => x).ToList(),
-            };
-
-
-            return View(aivm);
+            return View(db.Games.ToList());
         }
 
-        // GET: Admin/AdminGame/Details
+        // GET: Admin/AdminGames/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -54,14 +36,15 @@ namespace FinalApp.Areas.Admin.Controllers
             return View(game);
         }
 
-        // GET: Admin/AdminGame/Create
+        // GET: Admin/AdminGames/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/AdminGame/Create
-       
+        // POST: Admin/AdminGames/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Game game)
@@ -76,7 +59,7 @@ namespace FinalApp.Areas.Admin.Controllers
             return View(game);
         }
 
-        // GET: Admin/AdminGame/Edit
+        // GET: Admin/AdminGames/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -91,11 +74,12 @@ namespace FinalApp.Areas.Admin.Controllers
             return View(game);
         }
 
-        // POST: Admin/AdminGame/Edit
-        
+        // POST: Admin/AdminGames/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Price,Rating")] Game game)
+        public ActionResult Edit(Game game)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +90,7 @@ namespace FinalApp.Areas.Admin.Controllers
             return View(game);
         }
 
-        // GET: Admin/AdminGame/Delete
+        // GET: Admin/AdminGames/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -121,7 +105,7 @@ namespace FinalApp.Areas.Admin.Controllers
             return View(game);
         }
 
-        // POST: Admin/AdminGame/Delete
+        // POST: Admin/AdminGames/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

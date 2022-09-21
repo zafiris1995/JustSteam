@@ -12,6 +12,12 @@ namespace Entities
         public string Kind { get; set; }
 
         // Navigation Props
+
+        public Genre()
+        {
+            this.Games = new HashSet<Game>();
+        }
+
         public virtual ICollection<Game> Games { get; set; }
     }
 }

@@ -18,6 +18,10 @@ namespace Entities
         public string VideoUrl { get; set; }
 
         // Navigation Props
+        public Game()
+        {
+            this.Genres = new HashSet<Genre>();
+        }
 
         public virtual ICollection<Genre> Genres { get; set; }
         //public int CompanyId { get; set; }
