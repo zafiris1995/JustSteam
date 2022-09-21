@@ -8,12 +8,12 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-//    internal sealed class Configuration : DbMigrationsConfiguration<FinalApp.Models.ApplicationDbContext>
-//    {
-//        public Configuration()
-//        {
-//            AutomaticMigrationsEnabled = true;
-//        }
+    internal sealed class Configuration : DbMigrationsConfiguration<FinalApp.Models.ApplicationDbContext>
+    {
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = true;
+        }
 
         protected override void Seed(FinalApp.Models.ApplicationDbContext context)
         {
@@ -32,19 +32,7 @@
                 manager.Create(role);
             }
             var PasswordHash = new PasswordHasher();
-            if (!context.Users.Any(x => x.UserName == "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com"))
-            {
-                var store = new UserStore<ApplicationUser>(context);
-                var manager = new UserManager<ApplicationUser>(store);
-                var user = new ApplicationUser()
-                {
-                    UserName = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
-                    Email = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
-                    PasswordHash = PasswordHash.HashPassword("Lampater123#")
-                };
-                manager.Create(user);
-                manager.AddToRole(user.Id,"Admin");
-            }
+           
             if (!context.Users.Any(x => x.UserName == "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com"))
             {
                 var store = new UserStore<ApplicationUser>(context);
