@@ -307,6 +307,7 @@
     <Content Include="Assets\main\img\live\5.jpg" />
     <Content Include="Assets\main\img\live\6.jpg" />
     <Content Include="Assets\main\img\logo.svg" />
+    <Content Include="Assets\main\img\Paizo_logo.svg" />
     <Content Include="Assets\main\img\partners\3docean-light-background.png" />
     <Content Include="Assets\main\img\partners\activeden-light-background.png" />
     <Content Include="Assets\main\img\partners\audiojungle-light-background.png" />
@@ -381,6 +382,7 @@
     <Content Include="Areas\Customer\Views\CustomerGame\HomePage.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\ShowAllGames.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails.cshtml" />
+    <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails - Copy.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

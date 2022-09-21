@@ -25,7 +25,7 @@
                     <h2>@game.Title</h2>
                     <ul>
                         <li>€@game.Price </li>
-                        <li>@game.ReleaseDate.ToString("yyyy/MM/dd")</li>
+                        <li>@game.ReleaseDate.ToString("dd/MM/yy")</li>
                         <li>@game.Company.Name</li>
                         @foreach (var genre in game.Genres)
                         {
