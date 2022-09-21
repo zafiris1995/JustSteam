@@ -8,12 +8,12 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-//    internal sealed class Configuration : DbMigrationsConfiguration<FinalApp.Models.ApplicationDbContext>
-//    {
-//        public Configuration()
-//        {
-//            AutomaticMigrationsEnabled = true;
-//        }
+    internal sealed class Configuration : DbMigrationsConfiguration<FinalApp.Models.ApplicationDbContext>
+    {
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = true;
+        }
 
         protected override void Seed(FinalApp.Models.ApplicationDbContext context)
         {
@@ -24,6 +24,7 @@
                 var role = new IdentityRole() { Name = "Admin" };
                 manager.Create(role);
             }
+
             if (!context.Roles.Any(x => x.Name == "Customer"))
             {
                 var store = new RoleStore<IdentityRole>(context);
@@ -31,33 +32,23 @@
                 var role = new IdentityRole() { Name = "Customer" };
                 manager.Create(role);
             }
+
             var PasswordHash = new PasswordHasher();
-            if (!context.Users.Any(x => x.UserName == "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com"))
+
+            if (!context.Users.Any(x => x.UserName == "m.n.kollaros@gmail.com"))
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
                 var user = new ApplicationUser()
                 {
-                    UserName = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
-                    Email = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
+                    UserName = "m.n.kollaros@gmail.com",
+                    Email = "m.n.kollaros@gmail.com",
                     PasswordHash = PasswordHash.HashPassword("Lampater123#")
                 };
                 manager.Create(user);
                 manager.AddToRole(user.Id,"Admin");
             }
-            if (!context.Users.Any(x => x.UserName == "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com"))
-            {
-                var store = new UserStore<ApplicationUser>(context);
-                var manager = new UserManager<ApplicationUser>(store);
-                var user = new ApplicationUser()
-                {
-                    UserName = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
-                    Email = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
-                    PasswordHash = PasswordHash.HashPassword("Lampater123#")
-                };
-                manager.Create(user);
-                manager.AddToRole(user.Id, "Admin");
-            }
+
             if (!context.Users.Any(x => x.UserName == "zafiris.argyros@peoplecert.onmicrosoft.com"))
             {
                 var store = new UserStore<ApplicationUser>(context);
@@ -70,6 +61,20 @@
                 };
                 manager.Create(user);
                 manager.AddToRole(user.Id, "Admin");
+            }
+
+            if (!context.Users.Any(x => x.UserName == "Kitsos.Kitsos@gmail.com"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
+                var user = new ApplicationUser()
+                {
+                    UserName = "Kitsos.Kitsos@gmail.com",
+                    Email = "Kitsos.Kitsos@gmail.com",
+                    PasswordHash = PasswordHash.HashPassword("Tralala123#^")
+                };
+                manager.Create(user);
+                manager.AddToRole(user.Id, "Customer");
             }
         }
     }
