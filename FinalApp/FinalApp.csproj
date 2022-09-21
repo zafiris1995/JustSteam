@@ -183,6 +183,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminGameController.cs" />
+    <Compile Include="Areas\Admin\ViewModels\AdminIndexViewModel.cs" />
     <Compile Include="Areas\Customer\Controllers\CustomerCompanyController.cs" />
     <Compile Include="Areas\Customer\Controllers\CustomerGameController.cs" />
     <Compile Include="Areas\Customer\Controllers\CustomerGenreController.cs" />
@@ -374,7 +375,6 @@
     <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminJsLibraries.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminHeader.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminSideBar.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminGame\Create.cshtml" />
     <Content Include="Areas\Admin\Views\AdminGame\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AdminGame\Details.cshtml" />
     <Content Include="Areas\Admin\Views\AdminGame\Edit.cshtml" />
@@ -383,6 +383,7 @@
     <Content Include="Areas\Customer\Views\CustomerGame\ShowAllGames.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails - Copy.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminGame\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -432,7 +433,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\ViewModels\" />
     <Folder Include="Areas\Customer\Data\" />
   </ItemGroup>
   <ItemGroup>

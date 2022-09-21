@@ -7,18 +7,36 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Entities;
+using FinalApp.Areas.Admin.ViewModels;
 using MyDatabase;
+using RepositoryServices.Persistance;
 
 namespace FinalApp.Areas.Admin.Controllers
 {
     public class AdminGameController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        UnitOfWork unit;
+
+        public AdminGameController()
+        {
+            unit = new UnitOfWork(db);
+        }
+
+
 
         // GET: Admin/AdminGame
         public ActionResult Index()
         {
-            return View(db.Games.ToList());
+
+            AdminIndexViewModel aivm = new AdminIndexViewModel()
+            {
+                Games = unit.Games.GetAll().ToList(),
+                AllGenres = db.Games.SelectMany(x => x.Genres.Select(y => y.Kind != null ? y.Kind : "No Genre")).Distinct().OrderBy(x => x).ToList(),
+            };
+
+
+            return View(aivm);
         }
 
         // GET: Admin/AdminGame/Details
@@ -46,7 +64,7 @@ namespace FinalApp.Areas.Admin.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Price,Rating")] Game game)
+        public ActionResult Create(Game game)
         {
             if (ModelState.IsValid)
             {
