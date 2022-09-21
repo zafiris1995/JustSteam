@@ -20,6 +20,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.PhotoUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhotoUrl)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Price)
         </dt>
 
@@ -44,13 +52,20 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhotoUrl)
+            @Html.DisplayNameFor(model => model.Company.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PhotoUrl)
+            @Html.DisplayFor(model => model.Company.Name)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Genres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genres)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.VideoUrl)
         </dt>

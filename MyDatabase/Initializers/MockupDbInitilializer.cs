@@ -8,14 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 namespace MyDatabase.Initializers
 {
-    internal class MockupDbInitilializer : DropCreateDatabaseAlways<ApplicationDbContext>
+    internal class MockupDbInitilializer : CreateDatabaseIfNotExists<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {
-
-
-            
-
 
             #region Game Seeding
 
