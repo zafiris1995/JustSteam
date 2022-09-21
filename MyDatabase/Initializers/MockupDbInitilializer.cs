@@ -65,9 +65,77 @@ namespace MyDatabase.Initializers
                 ReleaseDate = new DateTime(1997, 01, 03), 
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/3a/Diablo_Coverart.png", 
                 VideoUrl = "https://www.youtube.com/watch?v=o_Kr5i5F43U"
+            }; 
+            Game g6 = new Game() 
+            { 
+                Title = "Mass Effect", 
+                Price = 20, Rating = 5, 
+                ReleaseDate = new DateTime(2007, 11, 20), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e8/MassEffect.jpg", 
+                VideoUrl = "https://www.youtube.com/watch?v=-_6ZMr2bMco" 
+            };
+            Game g7 = new Game() 
+            { 
+                Title = "Dragon Age: Origins", 
+                Price = 10, 
+                Rating = 10, 
+                ReleaseDate = new DateTime(2009, 11, 03), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/8/89/Dragon_Age_Origins_cover.png", 
+                VideoUrl = "https://www.youtube.com/watch?v=4k81SFkhFG4" 
+            };
+            Game g8 = new Game() 
+            { 
+                Title = "Half-Life", 
+                Price = 70, 
+                Rating = 1, 
+                ReleaseDate = new DateTime(1998, 11, 19), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg", 
+                VideoUrl = "https://www.youtube.com/watch?v=5Wavn29LMrs" 
+            };
+            Game g9 = new Game() 
+            { 
+                Title = "Age of Empires II", 
+                Price = 15, 
+                Rating = 3, 
+                ReleaseDate = new DateTime(1999, 09, 30), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png", 
+                VideoUrl = "https://www.youtube.com/watch?v=ZOgBVR21pWg" 
+            };
+            Game g10 = new Game() 
+            { 
+                Title = "Starcraft II: Wings of Liberty", 
+                Price = 20, Rating = 8, 
+                ReleaseDate = new DateTime(2010, 07, 27), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg", 
+                VideoUrl = "https://www.youtube.com/watch?v=VSGmPpidDvo" 
+            };
+            Game g11 = new Game() 
+            { 
+                Title = "Diablo II", 
+                Price = 10, Rating = 5, 
+                ReleaseDate = new DateTime(2000, 06, 30), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png", 
+                VideoUrl = "https://www.youtube.com/watch?v=KxnWjyvmpnI" 
+            };
+            Game g12 = new Game() 
+            { 
+                Title = "Pathfinder: Kingmaker", 
+                Price = 30, Rating = 3, 
+                ReleaseDate = new DateTime(2018, 09, 25), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/e/e6/Pathfinder_Kingmaker_cover_art.jpg", 
+                VideoUrl = "https://www.youtube.com/watch?v=MrP8-wuZSoU" 
+            };
+            Game g13 = new Game() 
+            { 
+                Title = "Oxygen Not Included", 
+                Price = 25, Rating = 8, 
+                ReleaseDate = new DateTime(2019, 07, 30), 
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/f/f6/Oxygen_Not_Included_cover_art.jpg", 
+                VideoUrl = "https://www.youtube.com/watch?v=wcLayGm_pM4" 
             };
 
-            context.Games.AddOrUpdate(g1, g2, g3, g4, g5);
+
+            context.Games.AddOrUpdate(g1, g2, g3, g4, g5, g6 ,g7, g8, g9, g10, g11, g12, g13);
             context.SaveChanges();
 
             #endregion
@@ -124,6 +192,14 @@ namespace MyDatabase.Initializers
             g3.Company = c17;
             g4.Company = c1;
             g5.Company = c1;
+            g6.Company = c9;
+            g7.Company = c10;
+            g8.Company = c11;
+            g9.Company = c12;
+            g10.Company = c1;
+            g11.Company = c1;
+            g12.Company = c13;
+            g13.Company = c14;
 
             // Adding Genres to Games
             g1.Genres = new List<Genre>() { gen8 };
@@ -131,18 +207,32 @@ namespace MyDatabase.Initializers
             g3.Genres = new List<Genre>() { gen3 };
             g4.Genres = new List<Genre>() { gen6 };
             g5.Genres = new List<Genre>() { gen1, gen4 };
+            g6.Genres = new List<Genre>() { gen4 };
+            g7.Genres = new List<Genre>() { gen4 };
+            g8.Genres = new List<Genre>() { gen4 };
+            g9.Genres = new List<Genre>() { gen6 };
+            g10.Genres = new List<Genre>() { gen6 };
+            g11.Genres = new List<Genre>() { gen1, gen4 };
+            g12.Genres = new List<Genre>() { gen4 };
+            g13.Genres = new List<Genre>() { gen5 };
 
             // Adding Games to Companies
             c1.Games = new List<Game>() { g4, g5 };
             c7.Games = new List<Game>() { g2 };
             c9.Games = new List<Game>() { g1 };
+            c10.Games = new List<Game>() { g7 };
+            c11.Games = new List<Game>() { g8 };
+            c12.Games = new List<Game>() { g9 };
+            c13.Games = new List<Game>() { g12 };
+            c14.Games = new List<Game>() { g13 };
             c17.Games = new List<Game>() { g3 };
 
             // Adding Games to Genres
-            gen1.Games = new List<Game>() { g5 , g1 };
+            gen1.Games = new List<Game>() { g5, g11 };
             gen2.Games = new List<Game>() { g2 };
             gen3.Games = new List<Game>() { g3 };
-            gen4.Games = new List<Game>() { g5 };
+            gen4.Games = new List<Game>() { g5, g7, g8, g11, g12 };
+            gen5.Games = new List<Game>() { g1, g13 };
             gen6.Games = new List<Game>() { g4 };
 
             context.SaveChanges();

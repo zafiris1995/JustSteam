@@ -23,7 +23,7 @@
                                 <h3 class="card__title"><a href="">@game.Title</a></h3>
                                 <ul class="card__list">
                                     <li>€@game.Price</li>
-                                    <li>@game.ReleaseDate.ToString("yyyy/mm/dd")</li>
+                                    <li>@game.ReleaseDate.ToString("dd/MM/yy")</li>
                                     @foreach (var genre in game.Genres)
                                     {
                                         <li>@genre.Kind</li>
