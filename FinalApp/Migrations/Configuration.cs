@@ -1,5 +1,6 @@
 ﻿namespace FinalApp.Migrations
 {
+    using FinalApp.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
@@ -29,6 +30,46 @@
                 var manager = new RoleManager<IdentityRole>(store);
                 var role = new IdentityRole() { Name = "Customer" };
                 manager.Create(role);
+            }
+            var PasswordHash = new PasswordHasher();
+            if (!context.Users.Any(x => x.UserName == "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
+                var user = new ApplicationUser()
+                {
+                    UserName = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
+                    Email = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
+                    PasswordHash = PasswordHash.HashPassword("Lampater123#")
+                };
+                manager.Create(user);
+                manager.AddToRole(user.Id,"Admin");
+            }
+            if (!context.Users.Any(x => x.UserName == "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
+                var user = new ApplicationUser()
+                {
+                    UserName = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
+                    Email = "matthaios-nikolaos.kollaros@peoplecert.onmicrosoft.com",
+                    PasswordHash = PasswordHash.HashPassword("Lampater123#")
+                };
+                manager.Create(user);
+                manager.AddToRole(user.Id, "Admin");
+            }
+            if (!context.Users.Any(x => x.UserName == "zafiris.argyros@peoplecert.onmicrosoft.com"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
+                var user = new ApplicationUser()
+                {
+                    UserName = "zafiris.argyros@peoplecert.onmicrosoft.com",
+                    Email = "zafiris.argyros@peoplecert.onmicrosoft.com",
+                    PasswordHash = PasswordHash.HashPassword("Lampater123#")
+                };
+                manager.Create(user);
+                manager.AddToRole(user.Id, "Admin");
             }
         }
     }
