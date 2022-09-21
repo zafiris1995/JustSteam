@@ -31,7 +31,11 @@ namespace FinalApp.Areas.Customer.Controllers
             {
                 Games = unit.Games.GetAll(),     
                 
-                GetBestGames = unit.Games.GetBestGames()
+                GetBestGames = unit.Games.GetBestGames(),
+                GetOldestGames = unit.Games.GetOldestGames(),
+                GetNewestGames = unit.Games.GetNewestGames(),
+                GetGamesByPriceAsc = unit.Games.GetGamesByPriceAsc(),
+                GetGamesByPriceDesc = unit.Games.GetGamesByPriceDesc(),
             };
 
             return View(givm);
