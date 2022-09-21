@@ -10,6 +10,8 @@ namespace RepositoryServices.Core
     internal interface IUnitOfWork : IDisposable
     {
         IGameRepository Games { get; }
+        IGenreRepository Genres { get; }
+        ICompanyRepository Companies { get; }
 
         int Complete();
     }

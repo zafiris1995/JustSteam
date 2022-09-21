@@ -12,13 +12,19 @@ namespace Entities
         public string Title { get; set; }
         public int Price { get; set; }
         public int Rating { get; set; }
+        //public string Description { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string PhotoUrl { get; set; }
         public string VideoUrl { get; set; }
 
         // Navigation Props
+        public Game()
+        {
+            this.Genres = new HashSet<Genre>();
+        }
 
         public virtual ICollection<Genre> Genres { get; set; }
+        //public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
     }
 }

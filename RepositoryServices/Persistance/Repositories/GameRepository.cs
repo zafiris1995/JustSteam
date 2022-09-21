@@ -24,5 +24,25 @@ namespace RepositoryServices.Persistance.Repositories
         {
             return table.OrderBy(x => x.Title).ToList();
         }
+
+        public IEnumerable<Game> GetOldestGames()
+        {
+            return table.OrderBy(x => x.ReleaseDate).ToList();
+        }
+
+        public IEnumerable<Game> GetNewestGames()
+        {
+            return table.OrderByDescending(x => x.ReleaseDate).ToList();
+        }
+
+        public IEnumerable<Game> GetGamesByPriceAsc()
+        {
+            return table.OrderBy(x => x.Price).ToList();
+        }
+
+        public IEnumerable<Game> GetGamesByPriceDesc()
+        {
+            return table.OrderByDescending(x => x.Price).ToList();
+        }
     }
 }

@@ -18,9 +18,16 @@ namespace RepositoryServices.Persistance
         {
             context = dbContext;
             Games = new GameRepository(context);
+            Genres = new GenreRepository(context);
+            Companies = new CompanyRepository(context);
+            
         }
 
-        public IGameRepository Games { get; set; }
+        public IGameRepository Games { get; private set; }
+
+        public IGenreRepository Genres { get; private set; }
+
+        public ICompanyRepository Companies { get; private set; }
 
         public int Complete()
         {

@@ -4,6 +4,7 @@ using RepositoryServices.Persistance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,30 +22,90 @@ namespace FinalApp.Areas.Customer.Controllers
         }
 
 
-        // GET: Customer/CustomerGame
-        public ActionResult Index()
+        public ActionResult HomePage()
         {
+
             
 
             GameIndexViewModel givm = new GameIndexViewModel()
             {
-                Games = unit.Games.GetAll(),
-                //GetBestGames = unit.Games.GetBestGames()
-            };          
+                Games = unit.Games.GetAll(),     
+                
+                GetBestGames = unit.Games.GetBestGames(),
+                GetOldestGames = unit.Games.GetOldestGames(),
+                GetNewestGames = unit.Games.GetNewestGames(),
+                GetGamesByPriceAsc = unit.Games.GetGamesByPriceAsc(),
+                GetGamesByPriceDesc = unit.Games.GetGamesByPriceDesc(),
+            };
 
             return View(givm);
         }
 
-
-        public ActionResult CustomerGameDetails()
+     
+        public ActionResult ShowAllGames(string genreSearch, string yearSearch, string sortOptions )
         {
 
+            var games = unit.Games.GetAll().OrderBy(x => x.Title).ToList();
+            IEnumerable<Game> filteredGames = games.ToList();
 
-            return View();
+            //filtering
+
+            if (!string.IsNullOrEmpty(genreSearch))
+            {
+                filteredGames = filteredGames.Where(x => x.Genres.Select(y => y?.Kind).Contains(genreSearch));
+            }
+
+
+            //sorting 
+
+            switch (sortOptions)
+            {
+                case "AlphaAsc": filteredGames = filteredGames.OrderBy(x => x.Title).ToList(); break;
+                case "NewestAsc": filteredGames = filteredGames.OrderByDescending(x => x.ReleaseDate).ToList(); break;
+                case "OldestAsc": filteredGames = filteredGames.OrderBy(x => x.ReleaseDate).ToList(); break;
+                case "PriceAsc": filteredGames = filteredGames.OrderBy(x => x.Price).ToList(); break;
+                case "PriceDesc": filteredGames = filteredGames.OrderByDescending(x => x.Price).ToList(); break;
+                default: filteredGames = filteredGames.OrderBy(x => x.Title).ToList(); break;
+            }
+
+
+            GameIndexViewModel givm = new GameIndexViewModel()
+            {
+                Games = filteredGames,
+                AllGenres = games.SelectMany(x => x.Genres.Select(y => y.Kind != null ? y.Kind : "No Genre")).Distinct().OrderBy(x => x).ToList(),
+                GetBestGames = unit.Games.GetBestGames()
+            };
+
+
+            return View(givm);
+        }
+
+        public ActionResult CustomerGameDetails(int? id)
+        {
+            
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Game game = db.Games.Find(id);
+            if (game == null)
+            {
+                return HttpNotFound();
+            }
+
+            GameDetailsViewModel gdvm = new GameDetailsViewModel()
+            {
+                Game = game
+            };
+
+            return View(gdvm);
+
+            
         }
 
 
-
+        [ChildActionOnly]
         public ActionResult DisplayGameCard(List<Game> games, string headerMessage)
         {
             DisplayGameCard dgc = new DisplayGameCard()
@@ -54,6 +115,13 @@ namespace FinalApp.Areas.Customer.Controllers
             };
             return View(dgc);
         }
+
+
+        //public ActionResult DisplayAllGames()
+        //{
+        //    return ();
+        //}
+        
 
     }
 }

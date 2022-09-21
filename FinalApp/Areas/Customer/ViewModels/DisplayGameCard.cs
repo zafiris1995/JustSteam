@@ -11,5 +11,7 @@ namespace FinalApp.Areas.Customer.ViewModels
         public IEnumerable<Game> Games { get; set; }
 
         public string HeaderTitle { get; set; }
+
+        
     }
 }

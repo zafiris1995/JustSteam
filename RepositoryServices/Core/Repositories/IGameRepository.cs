@@ -11,6 +11,10 @@ namespace RepositoryServices.Core.Repositories
     {
         IEnumerable<Game> GetBestGames();
         IEnumerable<Game> GetGamesOrderedByAscending();
+        IEnumerable<Game> GetOldestGames();
+        IEnumerable<Game> GetNewestGames();
+        IEnumerable<Game> GetGamesByPriceAsc();
+        IEnumerable<Game> GetGamesByPriceDesc();
 
     }
 }

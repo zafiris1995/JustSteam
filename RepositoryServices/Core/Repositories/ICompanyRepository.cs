@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RepositoryServices.Core.Repositories
 {
-    internal interface ICompanyRepository : IGenericRepository<Company>
+    public interface ICompanyRepository : IGenericRepository<Company>
     {
     }
 }

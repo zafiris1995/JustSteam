@@ -8,9 +8,9 @@ namespace Entities
 {
     public class Company
     {
-        public int Id { get; set; }
+        public int CompanyId { get; set; }
         public string Name { get; set; }
-        public string PhotoUrl {get; set; }
+        public string PhotoUrl { get; set; }
 
         // Navigation Props
         public virtual ICollection<Game> Games { get; set; }
