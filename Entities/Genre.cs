@@ -17,7 +17,7 @@ namespace Entities
         {
             this.Games = new HashSet<Game>();
         }
-
+        // Navigation Properties
         public virtual ICollection<Game> Games { get; set; }
     }
 }

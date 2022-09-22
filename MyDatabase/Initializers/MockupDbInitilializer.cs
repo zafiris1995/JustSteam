@@ -184,7 +184,7 @@ namespace MyDatabase.Initializers
                 Title = "The Secret of Monkey Island",
                 Price = 15,
                 Rating = 10,
-                ReleaseDate = new DateTime(1990 / 10 / 01),
+                ReleaseDate = new DateTime(1990 , 10 , 01),
                 PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/a/a8/The_Secret_of_Monkey_Island_artwork.jpg",
                 VideoUrl = ""
             };
@@ -248,7 +248,8 @@ namespace MyDatabase.Initializers
                 Rating = 6,
                 Price = 18,
                 ReleaseDate = new DateTime(2004, 11, 23),
-                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png"
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png",
+                VideoUrl = ""
             };
             Game g27 = new Game()
             {
@@ -561,7 +562,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -570,7 +571,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -579,7 +580,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -588,7 +589,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -597,7 +598,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -606,7 +607,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -615,7 +616,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0,
             //    Price = 0,
-            //    ReleaseDate = new DateTime(),
+            //    ReleaseDate = new DateTime(,,),
             //    PhotoUrl = "",
             //    VideoUrl = ""
             //};
@@ -624,7 +625,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -633,7 +634,7 @@ namespace MyDatabase.Initializers
             //    Title = "",
             //    Rating = 0, 
             //    Price = 0, 
-            //    ReleaseDate = new DateTime(), 
+            //    ReleaseDate = new DateTime(,,), 
             //    PhotoUrl = "", 
             //    VideoUrl = "" 
             //};
@@ -713,7 +714,7 @@ namespace MyDatabase.Initializers
             Company c37 = new Company() { Name = "Maxis", PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/Maxis-logo-2022.svg/327px-Maxis-logo-2022.svg.png?20220322211627" };
             Company c38 = new Company() { Name = "Hasbro Interactive", PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/Rct-box.jpg?20171215233650" };
 
-            context.Companies.AddOrUpdate(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10,
+            context.Companies.AddOrUpdate(c1,  c2,  c3,  c4,  c5,  c6,  c7,  c8,  c9,  c10,
                                           c11, c12, c13, c14, c15, c16, c17, c18, c19, c20,
                                           c21, c22, c23, c24, c25, c26, c27, c28, c29, c30,
                                           c31, c32, c33, c34, c35, c36, c37, c38);
@@ -794,6 +795,8 @@ namespace MyDatabase.Initializers
             //g68.Company = c;
             //g69.Company = c;
 
+            context.SaveChanges();
+
             // Adding Genres to Games
             g1.Genres = new List<Genre>() { gen7 };
             g2.Genres = new List<Genre>() { gen2 };
@@ -865,10 +868,12 @@ namespace MyDatabase.Initializers
             //g68.Genres = new List<Genre>() { gen };
             //g69.Genres = new List<Genre>() { gen };
 
+            context.SaveChanges();
+
             // Adding Games to Companies
             c1.Games = new List<Game>() { g4, g5, g15, g26, g46, g47, g48 };
-            c2.Games = new List<Game>() { g23 };
-            c3.Games = new List<Game>() { };
+            c2.Games = new List<Game>() {  };
+            c3.Games = new List<Game>() { g23};
             c4.Games = new List<Game>() { g16 };
             c5.Games = new List<Game>() { g24 };
             c6.Games = new List<Game>() { g17 };
@@ -906,7 +911,7 @@ namespace MyDatabase.Initializers
             c38.Games = new List<Game>() { g50 };
 
 
-
+            context.SaveChanges();
 
 
             // Adding Games to Genres

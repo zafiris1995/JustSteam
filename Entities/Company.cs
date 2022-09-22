@@ -12,7 +12,7 @@ namespace Entities
         public string Name { get; set; }
         public string PhotoUrl { get; set; }
 
-        // Navigation Props
+        // Navigation Properties
         public virtual ICollection<Game> Games { get; set; }
     }
 }

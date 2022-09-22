@@ -22,7 +22,7 @@ namespace Entities
         {
             this.Genres = new HashSet<Genre>();
         }
-
+        // Navigation Properties
         public virtual ICollection<Genre> Genres { get; set; }
         //public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
