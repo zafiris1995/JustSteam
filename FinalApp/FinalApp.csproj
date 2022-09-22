@@ -375,7 +375,6 @@
     <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminMetaHeader.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminJsLibraries.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminHeader.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\AdminComponents\_AdminSideBar.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\HomePage.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\ShowAllGames.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails.cshtml" />
