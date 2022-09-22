@@ -19,14 +19,21 @@
 
             <div class="home__card">
                 <a href="~/Customer/CustomerGame/CustomerGameDetails/@game.Id">
-                    <img height="414" width="330"   src="@game.PhotoUrl" alt="">
+                    <img height="414" width="330" src="@game.PhotoUrl" alt="">
                 </a>
                 <div>
                     <h2>@game.Title</h2>
                     <ul>
                         <li>€@game.Price </li>
                         <li>@game.ReleaseDate.ToString("dd/MM/yy")</li>
-                        <li>@game.Company.Name</li>
+                        @if (game.Company != null)
+                        {
+                            <li>@game.Company.Name</li>
+                        }
+                        else
+                        {
+                            <li>No Company!</li>
+                        }
                         @foreach (var genre in game.Genres)
                         {
                             <li>@genre.Kind</li>
