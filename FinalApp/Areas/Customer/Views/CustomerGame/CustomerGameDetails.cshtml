@@ -5,7 +5,27 @@
 }
 
 
+@section MyStyles{
+    <style>
+        .cartBtn {
+            padding: 6px 12px;
+            font-size: 16px;
+            background-color: #4079b7;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: aqua;
+        }
 
+            .cartBtn:hover {
+                background-color: #3ba0ed;
+            }
+
+            .cartBtn:active {
+                background-color: #3a13dc;
+            }
+    </style>
+}
 
 <!-- details -->
 <section class="section section--details-bg">
@@ -51,6 +71,9 @@
                                 {
                                     <li style="display:inline-block" id="showGenre">@game.Kind</li>
                                 }
+                            </ul>
+                            <ul class="card__list">
+                                <li><button class="cartBtn">ADD</button></li>
                             </ul>
                         </div>
                     </div>
