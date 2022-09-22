@@ -329,7 +329,7 @@ namespace MyDatabase.Initializers
                 Rating = 7,
                 Price = 25,
                 ReleaseDate = new DateTime(2000, 06, 29),
-                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/38/Icewind_dale_1_box_shot.jpgv",
+                PhotoUrl = "https://upload.wikimedia.org/wikipedia/en/3/38/Icewind_dale_1_box_shot.jpg",
                 VideoUrl = "https://www.youtube.com/watch?v=jb_3cg17TXw"
             };
             Game g36 = new Game()
