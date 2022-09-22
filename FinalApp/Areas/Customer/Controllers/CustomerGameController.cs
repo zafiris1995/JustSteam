@@ -42,7 +42,7 @@ namespace FinalApp.Areas.Customer.Controllers
         }
 
      
-        public ActionResult ShowAllGames(string genreSearch, string yearSearch, string sortOptions )
+        public ActionResult ShowAllGames(string genreSearch, string companySearch, string sortOptions )
         {
 
             var games = unit.Games.GetAll().OrderBy(x => x.Title).ToList();
@@ -53,6 +53,11 @@ namespace FinalApp.Areas.Customer.Controllers
             if (!string.IsNullOrEmpty(genreSearch))
             {
                 filteredGames = filteredGames.Where(x => x.Genres.Select(y => y?.Kind).Contains(genreSearch));
+            }
+
+            if (!string.IsNullOrEmpty(companySearch))
+            {
+                filteredGames = filteredGames.Where(x => x.Company.Name.Contains(genreSearch));
             }
 
 
@@ -73,6 +78,7 @@ namespace FinalApp.Areas.Customer.Controllers
             {
                 Games = filteredGames,
                 AllGenres = games.SelectMany(x => x.Genres.Select(y => y.Kind != null ? y.Kind : "No Genre")).Distinct().OrderBy(x => x).ToList(),
+                AllCompanies = games.Select(y => y.Company.Name != null ? y.Company.Name : "No Company").Distinct().ToList(),
                 GetBestGames = unit.Games.GetBestGames()
             };
 

@@ -14,5 +14,7 @@ namespace Entities
 
         // Navigation Props
         public virtual ICollection<Game> Games { get; set; }
+
+        
     }
 }

@@ -69,7 +69,7 @@
                             <form action="/Customer/CustomerGame/ShowAllGames" class="catalog__seslect-wrap">
                                 <div class="catalog__select-wrap">
 
-                                    <select class="catalog__select" name="genres" onchange="this.form.submit()">
+                                    <select class="catalog__select" name="genreSearch" onchange="this.form.submit()">
                                         <option value="">All genres</option>
                                         @foreach (var genre in Model.AllGenres)
                                         {
@@ -77,18 +77,20 @@
                                         }
                                     </select>
 
-                                    <select class="catalog__select" name="years" onchange="this.form.submit()">
-                                        <option value="All the years">All Companies</option>
-                                        @foreach (var game in Model.Games)
+                                    <select class="catalog__select" name="companySearch" onchange="this.form.submit()">
+                                        <option value="">All Companies</option>
+                                        @foreach (var companies in Model.AllCompanies)
                                         {
-                                            <option value="">@game.Company.Name</option>
+                                            <option value="">@companies</option>
                                         }
+
+
 
                                     </select>
                                 </div>
 
                                 <div class="slider-radio">
-                                    <input onchange="this.form.submit()" type="radio" name="sortOptions" value="AlphaAsc" id="alphabetically"><label for="lphabetically">Alphabetically</label>
+                                    <input onchange="this.form.submit()" type="radio" name="sortOptions" value="AlphaAsc" id="alphabetically"><label for="alphabetically">Alphabetically</label>
                                     <input onchange="this.form.submit()" type="radio" name="sortOptions" value="NewestAsc" id="newest"><label for="newest">Newest</label>
                                     <input onchange="this.form.submit()" type="radio" name="sortOptions" value="OldestAsc" id="oldest"><label for="oldest">Oldest</label>
                                     <input onchange="this.form.submit()" type="radio" name="sortOptions" value="PriceAsc" id="priceAsc"><label for="priceAsc">Price ASC</label>
@@ -113,11 +115,12 @@
                                         <h3 class="card__title"><a href="details.html">@game.Title</a></h3>
                                         <ul class="card__list">
                                             <li>€@game.Price</li>
-                                            @foreach (var genre in game.Genres)
+                                            @foreach (var genre in game.Genres.Select(x => x.Kind).ToList().Distinct())
                                             {
-                                                <li>@genre.Kind</li>
+                                                <li>@(!String.IsNullOrEmpty(genre) ? genre : "No Genre")</li>
                                             }
 
+                                            
                                             <li>@game.Company.Name</li>
                                             <li>@game.ReleaseDate.ToString("yyyy/MM/dd")  </li>
                                         </ul>
