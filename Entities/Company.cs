@@ -14,5 +14,7 @@ namespace Entities
 
         // Navigation Properties
         public virtual ICollection<Game> Games { get; set; }
+
+        
     }
 }

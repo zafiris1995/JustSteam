@@ -17,5 +17,6 @@ namespace FinalApp.Areas.Customer.ViewModels
         public IEnumerable<Game> GetGamesByPriceAsc { get; set; }
         public IEnumerable<Game> GetGamesByPriceDesc { get; set; }
         public IEnumerable<string> AllGenres { get; set; }
+        public IEnumerable<string> AllCompanies { get; set; }
     }
 }
