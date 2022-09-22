@@ -871,7 +871,7 @@ namespace MyDatabase.Initializers
             context.SaveChanges();
 
             // Adding Games to Companies
-            c1.Games = new List<Game>() { g4, g5, g15, g26, g46, g47, g48 };
+            c1.Games = new List<Game>() { g4, g5, g10, g11, g15, g26, g46, g47, g48 };
             c2.Games = new List<Game>() {  };
             c3.Games = new List<Game>() { g23};
             c4.Games = new List<Game>() { g16 };
@@ -879,7 +879,7 @@ namespace MyDatabase.Initializers
             c6.Games = new List<Game>() { g17 };
             c7.Games = new List<Game>() { g2, g3 };
             c8.Games = new List<Game>() { g25 };
-            c9.Games = new List<Game>() { g1, g29 };
+            c9.Games = new List<Game>() { g1, g6, g29 };
             c10.Games = new List<Game>() { g7, g30, g39, g41 };
             c11.Games = new List<Game>() { g8, g20, g33, g40 };
             c12.Games = new List<Game>() { g9 };
@@ -918,9 +918,9 @@ namespace MyDatabase.Initializers
             gen1.Games = new List<Game>() { g5, g11, g15, g22, g42, g43, g44, g45 };
             gen2.Games = new List<Game>() { g2, g19, g42, g43, g45 };
             gen3.Games = new List<Game>() { g3 };
-            gen4.Games = new List<Game>() { g5, g7, g8, g11, g12, g15, g17, g22, g30, g35, g39, g40, g41, g44, g51, g52 };
+            gen4.Games = new List<Game>() { g5, g6, g7, g8, g11, g12, g15, g17, g22, g30, g35, g39, g40, g41, g44, g51, g52 };
             gen5.Games = new List<Game>() { g13, g16, g29, g31, g32, g49, g50 };
-            gen6.Games = new List<Game>() { g4, g31, g34, g36, g37, g38, g46, g47, g48, g53, g54, g55, g56, g57, g58, g59, g60 };
+            gen6.Games = new List<Game>() { g4, g9, g10, g31, g34, g36, g37, g38, g46, g47, g48, g53, g54, g55, g56, g57, g58, g59, g60 };
             gen7.Games = new List<Game>() { g1 };
             gen8.Games = new List<Game>() { g26 };
             gen9.Games = new List<Game>() { g20 };
@@ -934,58 +934,6 @@ namespace MyDatabase.Initializers
 
             #endregion
 
-            #region Populating Lists
-
-            // Adding companies to games
-            g1.Company = c9;
-            g2.Company = c7;
-            g3.Company = c17;
-            g4.Company = c1;
-            g5.Company = c1;
-            g6.Company = c10;
-            g7.Company = c10;
-            g8.Company = c11;
-            g9.Company = c12;
-            g10.Company = c1;
-            g11.Company = c1;
-            g12.Company = c13;
-            g13.Company = c14;
-
-            // Adding genres to games
-            g1.Genres = new List<Genre> { gen8 };
-            g2.Genres = new List<Genre> { gen2 };
-            g3.Genres = new List<Genre> { gen3 };
-            g4.Genres = new List<Genre> { gen6 };
-            g5.Genres = new List<Genre> { gen1, gen4 };
-            g6.Genres = new List<Genre> { gen4 };
-            g7.Genres = new List<Genre> { gen4 };
-            g8.Genres = new List<Genre> { gen2 };
-            g9.Genres = new List<Genre> { gen6 };
-            g10.Genres = new List<Genre> { gen6 };
-            g11.Genres = new List<Genre> { gen1, gen4 };
-            g12.Genres = new List<Genre> { gen4 };
-            g13.Genres = new List<Genre> { gen5 };
-
-            // Adding games to companies           
-            c1.Games = new List<Game> { g4, g5, g10, g11 };
-            c7.Games = new List<Game> { g2 };
-            c9.Games = new List<Game> { g1 };
-            c10.Games = new List<Game> { g6, g7 };
-            c11.Games = new List<Game> { g8 };
-            c12.Games = new List<Game> { g9 };
-            c13.Games = new List<Game> { g12 };
-            c14.Games = new List<Game> { g13 };
-            c17.Games = new List<Game> { g3 };
-
-            // Adding games to genres
-            gen1.Games = new List<Game> { g5, g11 };
-            gen2.Games = new List<Game> { g2, g8 };
-            gen3.Games = new List<Game> { g3 };
-            gen4.Games = new List<Game> { g5, g6, g7, g11, g12 };
-            gen5.Games = new List<Game> { g13 };
-            gen6.Games = new List<Game> { g4, g9, g10 };
-
-            #endregion
 
         }
     }

@@ -221,6 +221,7 @@
     <Content Include="Assets\admin\img\checkmark.svg" />
     <Content Include="Assets\admin\img\img.svg" />
     <Content Include="Assets\admin\img\logo.svg" />
+    <Content Include="Assets\admin\img\Paizo_logo.svg" />
     <Content Include="Assets\admin\img\user.svg" />
     <Content Include="Assets\admin\img\video.svg" />
     <Content Include="Assets\admin\index.html" />

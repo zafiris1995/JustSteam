@@ -2,11 +2,12 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Details</h2>
 
-<div>
+<div style="color:white;" class="container">
     <h4>Game</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -57,15 +58,15 @@
             @Html.DisplayFor(model => model.Company.Name)
         </dd>
 
-       
-            <dt>
-                @Html.DisplayNameFor(model => model.Genres)
-            </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Genres)
-            </dd>
-        
+        <dt>
+            @Html.DisplayNameFor(model => model.Genres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genres)
+        </dd>
+
 
 
         <dt>
