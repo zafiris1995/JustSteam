@@ -25,7 +25,7 @@
         </dt>
 
         <dd>
-            <img src="@(Model.PhotoUrl)" />
+            @Html.DisplayFor(model => model.PhotoUrl)
         </dd>
 
         <dt>
@@ -65,10 +65,7 @@
         </dt>
 
         <dd>
-            @foreach (var item in Model.Genres)
-            {
-                <span>@item.Kind</span>
-            }
+            @Html.DisplayFor(model => model.Genres)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.VideoUrl)

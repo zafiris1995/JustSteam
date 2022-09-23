@@ -13,17 +13,12 @@ namespace Entities
         [Required(ErrorMessage = "You gave no Title"), MaxLength(60),MinLength(2)]
         public string Title { get; set; }
         [Required(ErrorMessage = "You gave wrong Price"),]
-        [Display(Name = "Price")]
         public int Price { get; set; }
-        [Display(Name = "Rating")]
         public int Rating { get; set; }
         //public string Description { get; set; }
         [Required]
-        [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
-        [Display(Name = "Cover Photo")]
         public string PhotoUrl { get; set; }
-        [Display(Name = "Trailer")]
         public string VideoUrl { get; set; }
 
         // Navigation Props
