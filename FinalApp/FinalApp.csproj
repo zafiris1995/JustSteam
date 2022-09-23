@@ -232,8 +232,6 @@
     <Content Include="Assets\admin\js\select2.min.js" />
     <Content Include="Assets\admin\js\smooth-scrollbar.js" />
     <Content Include="Assets\admin\reviews.html" />
-    <Content Include="Assets\admin\signin.html" />
-    <Content Include="Assets\admin\signup.html" />
     <Content Include="Assets\admin\users.html" />
     <Content Include="Assets\main\404.html" />
     <Content Include="Assets\main\about.html" />

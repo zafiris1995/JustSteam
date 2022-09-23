@@ -97,6 +97,97 @@
 
 
 
-<!-- end details -->
-<!-- similar -->
-<!-- end similar -->
+@section CartScript{
+
+    <script>
+        $(document).ready(function () {
+
+            let actors = JSON.parse(localStorage.getItem("actorsKey"));
+
+            if (actors) {
+                for (let a of actors) {
+                    let id = "#" + a.id   //#50
+                    $(id).find(".cartBtn").text("REMOVE");
+                    $(id).find(".cartBtn").css("background-color", "#ff5656")
+                }
+            }
+
+
+
+            $(".cartBtn").on("click", function () {
+
+                let id = $(this).parent().parent().parent().attr('id');
+                let photo = $("#photo" + id).attr('src');
+                let fullname = $("#fullname" + id).text();
+                let genres = Array.from($("#genre" + id).children()).map(x => x.innerText);
+                let salary = $("#salary" + id).text();
+                let borned = $("#borned" + id).text();
+                let country = $("#country" + id).text();
+
+                let actor = {
+                    id,
+                    photo,
+                    fullname,
+                    genres,
+                    salary,
+                    borned,
+                    country
+                }
+
+                console.log(actor);
+
+
+                if ($(this).text() == "ADD") {
+                    $(this).text("REMOVE")
+                    $(this).css("background-color", "#ff5656")
+
+                    let data = localStorage.getItem("actorsKey");
+
+
+                    if (!data) {
+                        actors = [];
+                        actors.push(actor);
+                        localStorage.setItem("actorsKey", JSON.stringify(actors));
+                        $("#CartNumber").text(actors.length);
+                    }
+                    else {
+                        let actors = JSON.parse(localStorage.getItem("actorsKey"));
+
+                        if (!(actors.some(x => x.id == actor.id))) {
+                            actors.push(actor);
+                            localStorage.setItem("actorsKey", JSON.stringify(actors));
+                            $("#CartNumber").text(actors.length);
+                        }
+                    }
+
+
+                }
+                else {
+                    $(this).text("ADD")
+                    $(this).css("background-color", "#4079b7")
+
+                    let data = localStorage.getItem("actorsKey");
+
+                    if (data) {
+                        let actors = JSON.parse(localStorage.getItem("actorsKey"));
+                        let reducedActors = actors.filter(x => x.id != actor.id);
+                        localStorage.setItem("actorsKey", JSON.stringify(reducedActors));
+                        $("#CartNumber").text(reducedActors.length);
+
+                    }
+                    else {
+
+                    }
+
+                }
+
+            })
+
+
+        });
+
+
+    </script>
+
+}
+
