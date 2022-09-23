@@ -10,11 +10,13 @@ namespace Entities
     public class Game
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "You gave no Title"), MaxLength(60),MinLength(2)]
         public string Title { get; set; }
+        [Required(ErrorMessage = "You gave wrong Price"),]
         public int Price { get; set; }
         public int Rating { get; set; }
         //public string Description { get; set; }
+        [Required]
         public DateTime ReleaseDate { get; set; }
         public string PhotoUrl { get; set; }
         public string VideoUrl { get; set; }
