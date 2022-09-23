@@ -7,14 +7,21 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Entities;
+using FinalApp.Areas.Admin.ViewModels;
 using MyDatabase;
+using RepositoryServices.Persistance;
 
 namespace FinalApp.Areas.Admin.Controllers
 {
     public class AdminGamesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        UnitOfWork unit;
 
+        public AdminGamesController()
+        {
+            unit = new UnitOfWork(db);
+        }
         // GET: Admin/AdminGames
         public ActionResult Index()
         {
@@ -62,6 +69,9 @@ namespace FinalApp.Areas.Admin.Controllers
         // GET: Admin/AdminGames/Edit/5
         public ActionResult Edit(int? id)
         {
+            
+
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -81,6 +91,13 @@ namespace FinalApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Game game)
         {
+            var games = unit.Games.GetAll().OrderBy(x => x.Title).ToList();
+            AdminIndexViewModel allCompanies = new AdminIndexViewModel
+            {
+                AllCompanies = games.Select(y => y.Company.Name != null ? y.Company.Name : "No Company").Distinct().ToList()
+            };
+
+
             if (ModelState.IsValid)
             {
                 db.Entry(game).State = EntityState.Modified;

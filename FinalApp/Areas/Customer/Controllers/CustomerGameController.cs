@@ -116,8 +116,9 @@ namespace FinalApp.Areas.Customer.Controllers
         {
             DisplayGameCard dgc = new DisplayGameCard()
             {
+                HeaderTitle = headerMessage,
                 Games = games,
-                HeaderTitle = headerMessage
+                
             };
             return View(dgc);
         }

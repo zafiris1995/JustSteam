@@ -59,11 +59,11 @@
 
 
 
-@Html.Action("DisplayGameCard", new { HeaderTitle = "Best Games", games = Model.GetBestGames })
-@Html.Action("DisplayGameCard", new { HeaderTitle = "Oldest Games", games = Model.GetOldestGames })
-@Html.Action("DisplayGameCard", new { HeaderTitle = "Newest Games", games = Model.GetNewestGames })
-@Html.Action("DisplayGameCard", new { HeaderTitle = "Low Price Games", games = Model.GetGamesByPriceAsc })
-@Html.Action("DisplayGameCard", new { HeaderTitle = "High Price Games", games = Model.GetGamesByPriceDesc })
+@Html.Action("DisplayGameCard", new { HeaderMessage = "Best Games", games = Model.GetBestGames })
+@Html.Action("DisplayGameCard", new { HeaderMessage = "Oldest Games", games = Model.GetOldestGames })
+@Html.Action("DisplayGameCard", new { HeaderMessage = "Newest Games", games = Model.GetNewestGames })
+@Html.Action("DisplayGameCard", new { HeaderMessage = "Low Price Games", games = Model.GetGamesByPriceAsc })
+@Html.Action("DisplayGameCard", new { HeaderMessage = "High Price Games", games = Model.GetGamesByPriceDesc })
 
 
 

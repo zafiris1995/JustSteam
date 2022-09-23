@@ -10,5 +10,6 @@ namespace FinalApp.Areas.Admin.ViewModels
     {
         public IEnumerable<Game> Games { get; set; }
         public IEnumerable<string> AllGenres { get; set; }
+        public IEnumerable<string> AllCompanies { get; set; }
     }
 }
