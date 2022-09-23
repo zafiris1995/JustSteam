@@ -17,32 +17,32 @@ namespace RepositoryServices.Persistance.Repositories
 
         public IEnumerable<Game> GetBestGames()
         {
-            return table.OrderBy(x => x.Rating).Take(5).ToList();
+            return table.OrderBy(x => x.Rating).Take(10).ToList();
         }
 
         public IEnumerable<Game> GetGamesOrderedByAscending()
         {
-            return table.OrderBy(x => x.Title).ToList();
+            return table.OrderBy(x => x.Title).Take(10).ToList();
         }
 
         public IEnumerable<Game> GetOldestGames()
         {
-            return table.OrderBy(x => x.ReleaseDate).ToList();
+            return table.OrderBy(x => x.ReleaseDate).Take(10).ToList();
         }
 
         public IEnumerable<Game> GetNewestGames()
         {
-            return table.OrderByDescending(x => x.ReleaseDate).ToList();
+            return table.OrderByDescending(x => x.ReleaseDate).Take(10).ToList();
         }
 
         public IEnumerable<Game> GetGamesByPriceAsc()
         {
-            return table.OrderBy(x => x.Price).ToList();
+            return table.OrderBy(x => x.Price).Take(10).ToList();
         }
 
         public IEnumerable<Game> GetGamesByPriceDesc()
         {
-            return table.OrderByDescending(x => x.Price).ToList();
+            return table.OrderByDescending(x => x.Price).Take(10).ToList();
         }
     }
 }
