@@ -378,7 +378,6 @@
     <Content Include="Areas\Customer\Views\CustomerGame\HomePage.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\ShowAllGames.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails.cshtml" />
-    <Content Include="Areas\Customer\Views\CustomerGame\CustomerGameDetails - Copy.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\AdminGames\Create.cshtml" />
