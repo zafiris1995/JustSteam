@@ -91,11 +91,7 @@ namespace FinalApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Game game)
         {
-            var games = unit.Games.GetAll().OrderBy(x => x.Title).ToList();
-            AdminIndexViewModel allCompanies = new AdminIndexViewModel
-            {
-                AllCompanies = games.Select(y => y.Company.Name != null ? y.Company.Name : "No Company").Distinct().ToList()
-            };
+           
 
 
             if (ModelState.IsValid)
