@@ -68,6 +68,21 @@
 
 
 
+@section CartScript{
 
+    <script>
+        $(document).ready(function () {
+
+            let games = JSON.parse(localStorage.getItem("gamesKey"));
+
+            if (games) {
+                $("#CartNumber").text(games.length);
+            }
+        });
+
+
+    </script>
+
+}
 
 

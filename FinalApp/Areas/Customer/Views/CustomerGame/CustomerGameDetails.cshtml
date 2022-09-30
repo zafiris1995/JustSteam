@@ -12,7 +12,6 @@
             font-size: 16px;
             background-color: #4079b7;
             border-radius: 10px;
-            text-transform: uppercase;
             font-weight: bold;
             color: aqua;
         }
@@ -52,7 +51,7 @@
                         Trailer
                     </a>
                     <!-- end trailer -->
-                    <div class="row">
+                    <div id="@(Model.Game.Id)" class="row">
                         <div class="col-6">
                             <ul class="list">
                                 <li>Rating:<svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#fff" d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68A1,1,0,0,0,6.9,21.44L12,18.77l5.1,2.67a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.88l.72,4.2-3.76-2a1.06,1.06,0,0,0-.94,0l-3.76,2,.72-4.2a1,1,0,0,0-.29-.88l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" class="color000 svgShape" /></svg></svg>@Model.Game.Rating</li>
@@ -73,7 +72,7 @@
                                 }
                             </ul>
                             <ul class="card__list">
-                                <li><button class="cartBtn">ADD</button></li>
+                                <li><button class="cartBtn">Add</button></li>
                             </ul>
                         </div>
                     </div>
@@ -102,88 +101,72 @@
     <script>
         $(document).ready(function () {
 
-            let actors = JSON.parse(localStorage.getItem("actorsKey"));
+            let games = JSON.parse(localStorage.getItem("gamesKey"));
 
-            if (actors) {
-                for (let a of actors) {
-                    let id = "#" + a.id   //#50
-                    $(id).find(".cartBtn").text("REMOVE");
-                    $(id).find(".cartBtn").css("background-color", "#ff5656")
+            if (games) {
+                for (let g of games) {
+                    if (@Model.Game.Id == g.id) {
+                        let id = "#" + @Model.Game.Id
+                        $(id).find(".cartBtn").text("Remove");
+                        $(id).find(".cartBtn").css("background-color", "#ff5656");
+                    }
                 }
+                $("#CartNumber").text(games.length);
             }
-
-
-
             $(".cartBtn").on("click", function () {
 
-                let id = $(this).parent().parent().parent().attr('id');
-                let photo = $("#photo" + id).attr('src');
-                let fullname = $("#fullname" + id).text();
-                let genres = Array.from($("#genre" + id).children()).map(x => x.innerText);
-                let salary = $("#salary" + id).text();
-                let borned = $("#borned" + id).text();
-                let country = $("#country" + id).text();
+                let id = @Model.Game.Id;
+                let title = "@Model.Game.Title";
+                let price = @Model.Game.Price;
+                let releaseDate = "@Model.Game.ReleaseDate.ToString("yy/MM/dd")";
+                let company = "@Model.Game.Company.Name";
 
-                let actor = {
+                let game = {
                     id,
-                    photo,
-                    fullname,
-                    genres,
-                    salary,
-                    borned,
-                    country
+                    title,
+                    price,
+                    releaseDate,
+                    company
                 }
 
-                console.log(actor);
+                console.log(game);
 
-
-                if ($(this).text() == "ADD") {
-                    $(this).text("REMOVE")
+                if ($(this).text() == "Add") {
+                    $(this).text("Remove")
                     $(this).css("background-color", "#ff5656")
 
-                    let data = localStorage.getItem("actorsKey");
-
+                    let data = localStorage.getItem("gamesKey");
 
                     if (!data) {
-                        actors = [];
-                        actors.push(actor);
-                        localStorage.setItem("actorsKey", JSON.stringify(actors));
-                        $("#CartNumber").text(actors.length);
+                        games = [];
+                        games.push(game);
+                        localStorage.setItem("gamesKey", JSON.stringify(games));
+                        $("#CartNumber").text(games.length);
                     }
                     else {
-                        let actors = JSON.parse(localStorage.getItem("actorsKey"));
-
-                        if (!(actors.some(x => x.id == actor.id))) {
-                            actors.push(actor);
-                            localStorage.setItem("actorsKey", JSON.stringify(actors));
-                            $("#CartNumber").text(actors.length);
+                        let games = JSON.parse(localStorage.getItem("gamesKey"));
+                        if (!(games.some(x => x.id == game.id))) {
+                            games.push(game);
+                            localStorage.setItem("gamesKey", JSON.stringify(games));
+                            $("#CartNumber").text(games.length);
                         }
                     }
-
-
                 }
                 else {
-                    $(this).text("ADD")
+                    $(this).text("Add")
                     $(this).css("background-color", "#4079b7")
 
-                    let data = localStorage.getItem("actorsKey");
+                    let data = localStorage.getItem("gamesKey");
 
                     if (data) {
-                        let actors = JSON.parse(localStorage.getItem("actorsKey"));
-                        let reducedActors = actors.filter(x => x.id != actor.id);
-                        localStorage.setItem("actorsKey", JSON.stringify(reducedActors));
-                        $("#CartNumber").text(reducedActors.length);
-
+                        let games = JSON.parse(localStorage.getItem("gamesKey"));
+                        let reducedGames = games.filter(x => x.id != game.id);
+                        localStorage.setItem("gamesKey", JSON.stringify(reducedGames));
+                        $("#CartNumber").text(reducedGames.length);
                     }
-                    else {
-
-                    }
-
                 }
 
-            })
-
-
+            });
         });
 
 

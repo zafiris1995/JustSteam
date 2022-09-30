@@ -77,7 +77,7 @@
                 <div class="row row--grid">
 
                     @foreach (var game in Model.Games)
-                     {
+                    {
                         <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                             <div class="card" id="@game.Id">
 
@@ -90,10 +90,10 @@
                                 <h3 id="@("title"+game.Id)" class="card__title"><a href="details.html">@game.Title</a></h3>
                                 <ul style="color:white;" class="list-group">
                                     <li id="@("price"+game.Id)">€@game.Price</li>
-                                    <li id="@("genre"+@game.Id))"> 
+                                    <li id="@("genres"+@game.Id))">
                                         @foreach (var genre in game.Genres)
                                         {
-                                            @genre.Kind <span> </span>
+                                            <span>@genre.Kind </span>
                                         }
                                     </li>
                                     @if (game.Company != null)
@@ -111,7 +111,7 @@
                                 </ul>
                             </div>
                         </div>
-                     }
+                    }
                 </div>
             </div>
         </div>
@@ -125,63 +125,79 @@
 
 @section CartScript{
 
-<script>
-    $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-        //let games = JSON.parse(localStorage.getItem("gamesKey"));
+            let games = JSON.parse(localStorage.getItem("gamesKey"));
 
-        //if (games) {
-        //    for (let a of games) {
-        //        let id = "#" + a.id   //#50
-        //        $(id).find(".cartBtn").text("REMOVE");
-        //        $(id).find(".cartBtn").css("background-color", "#ff5656")
-        //    }
-        //}
-
-
-
-        $(".cartBtn").on("click", function () {
-
-            let id = $(this).parent().parent().parent().attr('id');
-            let title = $("#title" + id).text();
-            let price = $("#price" + id).text();
-            let company = $("#company" + id).text();
-
-            let game = {
-                id,
-                title,
-                price,
-                company
+            if (games) {
+                for (let g of games) {
+                    let id = "#" + g.id;
+                    $(id).find(".cartBtn").text("Remove");
+                    $(id).find(".cartBtn").css("background-color", "#ff5656");
+                }
+                $("#CartNumber").text(games.length);
             }
 
-            console.log(game);
+            $(".cartBtn").on("click", function () {
 
-            if ($(this).text() == "Add") {
-                $(this).text("Remove")
-                $(this).css("background-color", "#ff5656")
+                let id = $(this).parent().parent().parent().attr('id');
+                let title = $("#title" + id).text();
+                let price = $("#price" + id).text();
+                let releaseDate = $("#releaseDate" + id).text();
+                let company = $("#company" + id).text();
 
-                let data = localStorage.getItem("gamesKey");
-                let games = [];
+                let game = {
+                    id,
+                    title,
+                    price,
+                    releaseDate,
+                    company
+                }
 
-                if (!data) {
-                    games.push(game);
-                    localStorage.setItem("gamesKey", JSON.stringify(games));
+                console.log(game);
+
+                if ($(this).text() == "Add") {
+                    $(this).text("Remove")
+                    $(this).css("background-color", "#ff5656")
+
+                    let data = localStorage.getItem("gamesKey");
+
+                    if (!data) {
+                        games = [];
+                        games.push(game);
+                        localStorage.setItem("gamesKey", JSON.stringify(games));
+                        $("#CartNumber").text(games.length);
+                    }
+                    else {
+                        let games = JSON.parse(localStorage.getItem("gamesKey"));
+                        if (!(games.some(x => x.id == game.id))) {
+                            games.push(game);
+                            localStorage.setItem("gamesKey", JSON.stringify(games));
+                            $("#CartNumber").text(games.length);
+                        }
+                    }
                 }
                 else {
+                    $(this).text("Add")
+                    $(this).css("background-color", "#4079b7")
 
+                    let data = localStorage.getItem("gamesKey");
+
+                    if (data) {
+                        let games = JSON.parse(localStorage.getItem("gamesKey"));
+                        let reducedGames = games.filter(x => x.id != game.id);
+                        localStorage.setItem("gamesKey", JSON.stringify(reducedGames));
+                        $("#CartNumber").text(reducedGames.length);
+                    }
                 }
-            }
-            else {
-                $(this).text("Add")
-                $(this).css("background-color", "#4079b7")
-            }
+
+            });
+
 
         });
 
 
-    });
-
-
-</script>
+    </script>
 
 }
